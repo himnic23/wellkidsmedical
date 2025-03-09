@@ -1,4 +1,3 @@
-/* 基礎設定 */
 :root {
   --primary-blue: #2B7A9E;
   --secondary-blue: #8ECAE6;
@@ -21,7 +20,7 @@
   padding: 0 20px;
 }
 
-/* 頂部導航列 */
+/* Header with Logo */
 .header {
   position: fixed;
   top: 0;
@@ -29,11 +28,22 @@
   background: var(--text-light);
   box-shadow: var(--shadow);
   z-index: 1000;
+  padding: 1rem 0;
 }
 
 .branding {
   display: flex;
   align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  transform: rotate(-5deg) scale(1.1);
 }
 
 .logo {
@@ -41,6 +51,7 @@
   color: var(--primary-blue);
   font-weight: 700;
   letter-spacing: 1.5px;
+  margin: 0;
 }
 
 .navigation {
@@ -70,7 +81,6 @@
   border-color: var(--secondary-blue);
 }
 
-/* 語言切換 */
 .lang-switch {
   display: flex;
   gap: 0.5rem;
@@ -91,7 +101,6 @@
   color: var(--text-light);
 }
 
-/* 首頁橫幅 */
 .hero {
   background: linear-gradient(rgba(43,122,158,0.9), rgba(142,202,230,0.9)),
               url('clinic-bg.jpg') center/cover;
@@ -118,7 +127,6 @@
   opacity: 0.9;
 }
 
-/* 聯絡資訊卡 */
 .contact-card {
   background: var(--text-light);
   border-radius: 1rem;
@@ -137,7 +145,6 @@
   display: block;
 }
 
-/* 響應式設計 */
 @media (max-width: 992px) {
   .nav-list {
     display: none;
@@ -145,5 +152,13 @@
   
   .hero h2 {
     font-size: 2.5rem;
+  }
+
+  .header-logo {
+    height: 35px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
   }
 }
