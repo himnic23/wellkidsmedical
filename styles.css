@@ -18,9 +18,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-/* Header */
+/* Header 結構优化 */
 .header {
   position: fixed;
   top: 0;
@@ -28,66 +31,61 @@
   background: var(--text-light);
   box-shadow: var(--shadow);
   z-index: 1000;
-  padding: 1rem 0;
-}
-
-.branding {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  padding: 0.8rem 0;
 }
 
 .header-logo {
-  height: 50px;
+  height: 38px; /* 原始尺寸的70% */
   width: auto;
-  display: block;
-  transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
-.header-logo:hover {
-  transform: rotate(-5deg) scale(1.1);
-}
-
-.clinic-titles {
+.header-main {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 標題區塊 */
+.clinic-titles {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-left: 1rem;
 }
 
 .clinic-name {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--primary-blue);
   font-weight: 700;
-  line-height: 1.2;
   display: none;
+  line-height: 1.2;
 }
 
 .clinic-name.zh-name::after {
-  content: " | ";
-  margin: 0 5px;
+  content: "|";
+  margin: 0 8px;
   color: var(--text-dark);
+  font-weight: 400;
 }
 
 .clinic-name.active {
-  display: block;
+  display: inline-block;
 }
 
-.clinic-titles.active-both .clinic-name {
-  display: inline !important;
-}
-
-/* Navigation */
+/* 導航列优化 */
 .navigation {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  flex-grow: 1;
 }
 
 .nav-list {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
   list-style: none;
-  margin-left: 3rem;
+  margin-left: 1rem;
 }
 
 .nav-list a {
@@ -95,7 +93,7 @@
   color: var(--text-dark);
   font-weight: 500;
   transition: color 0.3s ease;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
 }
 
@@ -107,11 +105,10 @@
 .lang-switch {
   display: flex;
   gap: 0.5rem;
-  margin-left: auto;
 }
 
 .lang-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   border: 1px solid var(--primary-blue);
   border-radius: 20px;
   background: transparent;
@@ -135,75 +132,54 @@
   color: var(--text-light);
 }
 
-.hero-content {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.lead {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* Contact Card */
-.contact-card {
-  background: var(--text-light);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: var(--shadow);
-  margin: -5rem auto 3rem;
-  max-width: 600px;
-  position: relative;
-}
-
-.address {
-  display: none;
-}
-
-.address.active {
-  display: block;
-}
-
-/* Responsive Design */
+/* 响应式设计 */
 @media (max-width: 992px) {
-  .nav-list {
-    display: none;
+  .header-logo {
+    height: 32px;
   }
   
-  .hero h2 {
-    font-size: 2.5rem;
-  }
-
-  .header-logo {
-    height: 40px;
-  }
-
   .clinic-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .nav-list {
+    gap: 1rem;
+  }
+  
+  .lang-btn {
+    padding: 0.3rem 0.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  .branding {
+  .container {
     gap: 10px;
+    padding: 0 15px;
   }
   
   .header-logo {
-    height: 35px;
+    height: 28px;
+  }
+  
+  .clinic-titles {
+    margin-left: 0.5rem;
   }
   
   .clinic-name.zh-name::after {
-    content: "";
-    margin: 0;
+    margin: 0 5px;
   }
   
-  .clinic-titles.active-both .clinic-name {
-    display: block !important;
+  .nav-list {
+    display: none;
+  }
+  
+  .lang-switch {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-logo {
+    height: 42px;
   }
 }
