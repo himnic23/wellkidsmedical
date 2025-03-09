@@ -1,48 +1,126 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
-
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>允翹兒科中心 - Well Kids Medical Centre</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <title>允翹兒科中心 | Well Kids Medical Centre</title>
+    <style>
+        /* 固定導覽列樣式 (參考網頁2) */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #f8f9fa;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* 語言切換按鈕 */
+        .lang-switch {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
+        /* 內容區間距調整 */
+        .content {
+            padding-top: 80px;
+        }
+
+        /* 其他樣式 */
+        body {font-family: 'Microsoft JhengHei', sans-serif; margin:0}
+        .clinic-info {background: #e3f2fd; padding:20px; margin-top:20px}
+    </style>
+</head>
 <body>
-    <!-- 固定菜單欄 -->
-    <nav id="navbar">
-        <div class="nav-content">
-            <div class="clinic-name">
-                <span id="clinic-name-zh">允翹兒科中心</span>
-                <span id="clinic-name-en" style="display: none;">Well Kids Medical Centre</span>
+    <!-- 導覽列 (固定定位) -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 data-i18n="clinic_name">允翹兒科中心</h1>
+            <div class="lang-switch">
+                <button onclick="switchLanguage('zh')">繁體中文</button>
+                <button onclick="switchLanguage('en')">English</button>
             </div>
-            <div class="language-switch">
-                <button id="lang-zh" onclick="switchLanguage('zh')">繁體中文</button>
-                <button id="lang-en" onclick="switchLanguage('en')">English</button>
-            </div>
+            <ul>
+                <li><a href="#home" data-i18n="home">首頁</a></li>
+                <li><a href="#services" data-i18n="services">服務項目</a></li>
+                <li><a href="#doctors" data-i18n="doctors">醫師團隊</a></li>
+                <li><a href="#contact" data-i18n="contact">聯絡我們</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- 網站內容 -->
-    <div id="content">
-        <div class="hero-section">
-            <h1 id="hero-title-zh">專業兒科服務，守護孩子健康</h1>
-            <h1 id="hero-title-en" style="display: none;">Professional Pediatric Services for Your Kids' Health</h1>
-            <p id="hero-description-zh">允翹兒科中心擁有經驗豐富的醫生團隊，提供全面且貼心的兒科診療服務。</p>
-            <p id="hero-description-en" style="display: none;">Well Kids Medical Centre has an experienced team of doctors, providing comprehensive and caring pediatric medical services.</p>
-        </div>
+    <div class="content">
+        <!-- 主要內容區 -->
+        <section id="home">
+            <h2 data-i18n="welcome">歡迎來到允翹兒科中心</h2>
+            <p data-i18n="welcome_text">專業兒童醫療照護，守護孩子健康成長</p>
+        </section>
 
-        <div class="contact-section">
-            <h2 id="contact-title-zh">聯繫我們</h2>
-            <h2 id="contact-title-en" style="display: none;">Contact Us</h2>
-            <p id="address-zh">地址：九龍旺角彌敦道688號旺角中心807室</p>
-            <p id="address-en" style="display: none;">Address: Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</p>
-            <p id="phone-zh">電話：92490109</p>
-            <p id="phone-en" style="display: none;">Phone number: 92490109</p>
+        <!-- 聯絡資訊 (參考網頁3) -->
+        <div class="clinic-info">
+            <p><span data-i18n="address">地址：</span>
+               <span id="address-zh">九龍旺角彌敦道688號旺角中心807室</span>
+               <span id="address-en" style="display:none">Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</span>
+            </p>
+            <p><span data-i18n="phone">電話：</span>92490109</p>
         </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <script>
+        // 多語言切換功能 (參考網頁3,4,5)
+        let currentLang = localStorage.getItem('lang') || 'zh';
+        
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            updateContent();
+        }
 
+        function updateContent() {
+            // 切換地址顯示
+            document.getElementById('address-zh').style.display = currentLang === 'zh' ? 'inline' : 'none';
+            document.getElementById('address-en').style.display = currentLang === 'en' ? 'inline' : 'none';
+            
+            // 其他文字切換（需建立語言包）
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.textContent = i18n[currentLang][key];
+            });
+        }
+
+        // 語言包範例
+        const i18n = {
+            zh: {
+                clinic_name: "允翹兒科中心",
+                home: "首頁",
+                services: "服務項目",
+                doctors: "醫師團隊",
+                contact: "聯絡我們",
+                welcome: "歡迎來到允翹兒科中心",
+                welcome_text: "專業兒童醫療照護，守護孩子健康成長",
+                address: "地址：",
+                phone: "電話："
+            },
+            en: {
+                clinic_name: "Well Kids Medical Centre",
+                home: "Home",
+                services: "Services",
+                doctors: "Our Doctors",
+                contact: "Contact",
+                welcome: "Welcome to Well Kids Medical Centre",
+                welcome_text: "Professional Pediatric Care for Healthy Growth",
+                address: "Address: ",
+                phone: "Tel: "
+            }
+        };
+
+        // 初始化語言
+        document.addEventListener('DOMContentLoaded', () => {
+            if(currentLang === 'en') updateContent();
+        });
+    </script>
+</body>
 </html>
