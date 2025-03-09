@@ -2,37 +2,47 @@
 <html lang="zh-HK">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>允翹兒科中心 - Well Kids Medical Centre</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>允翹兒科中心 - Well Kids Medical Centre</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- 固定菜單欄 -->
-  <nav id="navbar">
-    <div class="language-switch">
-      <button id="lang-zh" onclick="switchLanguage('zh')">繁體中文</button>
-      <button id="lang-en" onclick="switchLanguage('en')">English</button>
+    <!-- 固定菜單欄 -->
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="clinic-name">
+                <span id="clinic-name-zh">允翹兒科中心</span>
+                <span id="clinic-name-en" style="display: none;">Well Kids Medical Centre</span>
+            </div>
+            <div class="language-switch">
+                <button id="lang-zh" onclick="switchLanguage('zh')">繁體中文</button>
+                <button id="lang-en" onclick="switchLanguage('en')">English</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 網站內容 -->
+    <div id="content">
+        <div class="hero-section">
+            <h1 id="hero-title-zh">專業兒科服務，守護孩子健康</h1>
+            <h1 id="hero-title-en" style="display: none;">Professional Pediatric Services for Your Kids' Health</h1>
+            <p id="hero-description-zh">允翹兒科中心擁有經驗豐富的醫生團隊，提供全面且貼心的兒科診療服務。</p>
+            <p id="hero-description-en" style="display: none;">Well Kids Medical Centre has an experienced team of doctors, providing comprehensive and caring pediatric medical services.</p>
+        </div>
+
+        <div class="contact-section">
+            <h2 id="contact-title-zh">聯繫我們</h2>
+            <h2 id="contact-title-en" style="display: none;">Contact Us</h2>
+            <p id="address-zh">地址：九龍旺角彌敦道688號旺角中心807室</p>
+            <p id="address-en" style="display: none;">Address: Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</p>
+            <p id="phone-zh">電話：92490109</p>
+            <p id="phone-en" style="display: none;">Phone number: 92490109</p>
+        </div>
     </div>
-  </nav>
 
-  <!-- 網站內容 -->
-  <div id="content">
-    <h1 id="title-zh">允翹兒科中心</h1>
-    <h1 id="title-en" style="display: none;">Well Kids Medical Centre</h1>
-    <p id="description-zh">允翹兒科中心致力於為兒童提供優質的醫療服務。我們擁有專業的醫生團隊，為孩子們的健康保駕護航。</p>
-    <p id="description-en" style="display: none;">Well Kids Medical Centre is committed to providing high-quality medical services for children. We have a professional team of doctors to safeguard the health of your kids.</p>
-
-    <h2 id="contact-title-zh">聯繫我們</h2>
-    <h2 id="contact-title-en" style="display: none;">Contact Us</h2>
-    <p id="address-zh">地址：九龍旺角彌敦道688號旺角中心807室</p>
-    <p id="address-en" style="display: none;">Address: Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</p>
-    <p id="phone-zh">電話：92490109</p>
-    <p id="phone-en" style="display: none;">Phone number: 92490109</p>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
