@@ -1,6 +1,5 @@
 const translations = {
   zh: {
-    clinic_name: "允翹兒科中心",
     home: "首頁",
     services: "服務項目",
     doctors: "醫療團隊",
@@ -10,7 +9,6 @@ const translations = {
     contact_info: "聯絡資訊"
   },
   en: {
-    clinic_name: "Well Kids Medical Centre",
     home: "Home",
     services: "Services",
     doctors: "Medical Team",
@@ -22,16 +20,33 @@ const translations = {
 };
 
 function switchLanguage(lang) {
+  // Update clinic titles
+  const titlesContainer = document.querySelector('.clinic-titles');
+  document.querySelectorAll('.clinic-name').forEach(name => {
+    name.classList.remove('active');
+  });
+  
+  if(lang === 'zh') {
+    document.querySelector('.zh-name').classList.add('active');
+    titlesContainer.classList.remove('active-both');
+  } else {
+    document.querySelector('.en-name').classList.add('active');
+    titlesContainer.classList.add('active-both');
+  }
+
+  // Update language buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.remove('active');
     if(btn.dataset.lang === lang) btn.classList.add('active');
   });
 
+  // Update addresses
   document.querySelectorAll('.address').forEach(addr => {
     addr.classList.remove('active');
   });
   document.querySelector(`.${lang}-address`).classList.add('active');
 
+  // Update other translatable elements
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.dataset.i18n;
     element.textContent = translations[lang][key];
@@ -40,6 +55,7 @@ function switchLanguage(lang) {
   localStorage.setItem('lang', lang);
 }
 
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('lang') || 'zh';
   switchLanguage(savedLang);
