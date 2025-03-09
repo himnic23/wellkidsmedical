@@ -4,182 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>允翹兒科中心 | Well Kids Medical Centre</title>
-    <style>
-        :root {
-            --primary: #2B7A9E;
-            --secondary: #8ECAE6;
-            --light-bg: #F5FCFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Helvetica Neue', 'Microsoft JhengHei', sans-serif;
-        }
-
-        /* 固定導覽列 */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .lang-switch button {
-            margin-left: 1rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background: white;
-            cursor: pointer;
-        }
-
-        .lang-switch button.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* 主內容區 */
-        .content {
-            margin-top: 80px;
-            padding: 2rem;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-            background: var(--light-bg);
-            border-radius: 1rem;
-        }
-
-        .contact-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            margin: 2rem auto;
-            max-width: 600px;
-        }
-
-        .address-container {
-            display: none;
-        }
-        .address-container.active {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo" data-i18n="clinic_name">允翹兒科中心</div>
-        <div class="nav-links">
-            <a href="#home" data-i18n="home">首頁</a>
-            <a href="#services" data-i18n="services">服務項目</a>
-            <a href="#doctors" data-i18n="doctors">醫師團隊</a>
-            <a href="#contact" data-i18n="contact">聯絡我們</a>
+    <!-- 頂部導航列 -->
+    <header class="header">
+        <div class="container">
+            <div class="branding">
+                <h1 class="logo" data-i18n="clinic_name">允翹兒科中心</h1>
+            </div>
+            
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="home">首頁</a></li>
+                    <li><a href="services.html" data-i18n="services">服務項目</a></li>
+                    <li><a href="team.html" data-i18n="doctors">醫療團隊</a></li>
+                    <li><a href="contact.html" data-i18n="contact">聯絡我們</a></li>
+                </ul>
+                
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="zh">繁中</button>
+                    <button class="lang-btn" data-lang="en">ENG</button>
+                </div>
+            </nav>
         </div>
-        <div class="lang-switch">
-            <button class="active" id="zhBtn" onclick="switchLanguage('zh')">繁體中文</button>
-            <button id="enBtn" onclick="switchLanguage('en')">English</button>
-        </div>
-    </nav>
+    </header>
 
-    <div class="content">
-        <section class="hero">
-            <h1 data-i18n="welcome_title">專業兒童醫療照護</h1>
-            <p class="subtitle" data-i18n="welcome_subtitle">守護孩子健康成長的值得信賴夥伴</p>
+    <!-- 首頁橫幅 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 data-i18n="hero_title">專業兒科醫療照護</h2>
+                <p class="lead" data-i18n="hero_subtitle">守護兒童健康成長的值得信賴夥伴</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要內容 -->
+    <main class="main-content">
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="address zh-address">
+                        <h3 data-i18n="contact_info">聯絡資訊</h3>
+                        <p>九龍旺角彌敦道688號旺角中心807室</p>
+                        <p>電話: 9249 0109</p>
+                    </div>
+                    <div class="address en-address">
+                        <h3>Contact Information</h3>
+                        <p>Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</p>
+                        <p>Tel: 9249 0109</p>
+                    </div>
+                </div>
+            </div>
         </section>
+    </main>
 
-        <div class="contact-box">
-            <div class="address-container active" id="zhAddress">
-                <h3 data-i18n="contact_title">聯絡資訊</h3>
-                <p>地址：九龍旺角彌敦道688號旺角中心807室</p>
-                <p>電話：9249 0109</p>
-            </div>
-            <div class="address-container" id="enAddress">
-                <h3>Contact Information</h3>
-                <p>Address: Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</p>
-                <p>Tel: 9249 0109</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // 多語言系統
-        const translations = {
-            zh: {
-                clinic_name: "允翹兒科中心",
-                home: "首頁",
-                services: "服務項目",
-                doctors: "醫師團隊",
-                contact: "聯絡我們",
-                welcome_title: "專業兒童醫療照護",
-                welcome_subtitle: "守護孩子健康成長的值得信賴夥伴",
-                contact_title: "聯絡資訊"
-            },
-            en: {
-                clinic_name: "Well Kids Medical Centre",
-                home: "Home",
-                services: "Services",
-                doctors: "Our Team",
-                contact: "Contact",
-                welcome_title: "Professional Pediatric Care",
-                welcome_subtitle: "Your Trusted Partner in Child Health",
-                contact_title: "Contact Information"
-            }
-        };
-
-        function switchLanguage(lang) {
-            // 更新按鈕狀態
-            document.getElementById('zhBtn').classList.remove('active');
-            document.getElementById('enBtn').classList.remove('active');
-            document.getElementById(lang + 'Btn').classList.add('active');
-
-            // 切換地址顯示
-            document.getElementById('zhAddress').classList.remove('active');
-            document.getElementById('enAddress').classList.remove('active');
-            document.getElementById(lang + 'Address').classList.add('active');
-
-            // 更新所有文字
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                element.textContent = translations[lang][key];
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
