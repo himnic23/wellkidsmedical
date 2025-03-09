@@ -20,7 +20,7 @@
   padding: 0 20px;
 }
 
-/* Header with Logo */
+/* Header */
 .header {
   position: fixed;
   top: 0;
@@ -38,7 +38,9 @@
 }
 
 .header-logo {
-  height: 45px;
+  height: 50px;
+  width: auto;
+  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -46,18 +48,39 @@
   transform: rotate(-5deg) scale(1.1);
 }
 
-.logo {
-  font-size: 1.8rem;
-  color: var(--primary-blue);
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin: 0;
+.clinic-titles {
+  display: flex;
+  flex-direction: column;
 }
 
+.clinic-name {
+  font-size: 1.4rem;
+  color: var(--primary-blue);
+  font-weight: 700;
+  line-height: 1.2;
+  display: none;
+}
+
+.clinic-name.zh-name::after {
+  content: " | ";
+  margin: 0 5px;
+  color: var(--text-dark);
+}
+
+.clinic-name.active {
+  display: block;
+}
+
+.clinic-titles.active-both .clinic-name {
+  display: inline !important;
+}
+
+/* Navigation */
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
+  flex-grow: 1;
 }
 
 .nav-list {
@@ -101,6 +124,7 @@
   color: var(--text-light);
 }
 
+/* Hero Section */
 .hero {
   background: linear-gradient(rgba(43,122,158,0.9), rgba(142,202,230,0.9)),
               url('clinic-bg.jpg') center/cover;
@@ -127,6 +151,7 @@
   opacity: 0.9;
 }
 
+/* Contact Card */
 .contact-card {
   background: var(--text-light);
   border-radius: 1rem;
@@ -145,6 +170,7 @@
   display: block;
 }
 
+/* Responsive Design */
 @media (max-width: 992px) {
   .nav-list {
     display: none;
@@ -155,10 +181,29 @@
   }
 
   .header-logo {
-    height: 35px;
+    height: 40px;
   }
 
-  .logo {
-    font-size: 1.4rem;
+  .clinic-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .branding {
+    gap: 10px;
+  }
+  
+  .header-logo {
+    height: 35px;
+  }
+  
+  .clinic-name.zh-name::after {
+    content: "";
+    margin: 0;
+  }
+  
+  .clinic-titles.active-both .clinic-name {
+    display: block !important;
   }
 }
