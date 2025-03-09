@@ -23,7 +23,7 @@
   gap: 15px;
 }
 
-/* Header 結構优化 */
+/* Header 修改 */
 .header {
   position: fixed;
   top: 0;
@@ -35,7 +35,7 @@
 }
 
 .header-logo {
-  height: 38px; /* 原始尺寸的70% */
+  height: 57px; /* 增加50% */
   width: auto;
   flex-shrink: 0;
 }
@@ -47,7 +47,7 @@
   gap: 0.5rem;
 }
 
-/* 標題區塊 */
+/* 標題修改 */
 .clinic-titles {
   display: flex;
   align-items: baseline;
@@ -63,18 +63,16 @@
   line-height: 1.2;
 }
 
+/* 移除分隔線 */
 .clinic-name.zh-name::after {
-  content: "|";
-  margin: 0 8px;
-  color: var(--text-dark);
-  font-weight: 400;
+  content: ""; /* 移除原本的 | 符號 */
 }
 
 .clinic-name.active {
   display: inline-block;
 }
 
-/* 導航列优化 */
+/* 導航列 */
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -135,7 +133,7 @@
 /* 响应式设计 */
 @media (max-width: 992px) {
   .header-logo {
-    height: 32px;
+    height: 48px;
   }
   
   .clinic-name {
@@ -158,15 +156,11 @@
   }
   
   .header-logo {
-    height: 28px;
+    height: 42px;
   }
   
   .clinic-titles {
     margin-left: 0.5rem;
-  }
-  
-  .clinic-name.zh-name::after {
-    margin: 0 5px;
   }
   
   .nav-list {
@@ -175,11 +169,5 @@
   
   .lang-switch {
     margin-left: auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .header-logo {
-    height: 42px;
   }
 }
