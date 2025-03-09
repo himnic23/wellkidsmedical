@@ -1,76 +1,149 @@
-/* 全域樣式 */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* 基礎設定 */
+:root {
+  --primary-blue: #2B7A9E;
+  --secondary-blue: #8ECAE6;
+  --light-bg: #F5FCFF;
+  --text-dark: #333;
+  --text-light: #fff;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* 固定菜單欄 */
-#navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
-    z-index: 100;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', 'Microsoft JhengHei', sans-serif;
 }
 
-.nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.language-switch button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 16px;
+/* 頂部導航列 */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--text-light);
+  box-shadow: var(--shadow);
+  z-index: 1000;
 }
 
-.language-switch button:hover {
-    text-decoration: underline;
+.branding {
+  display: flex;
+  align-items: center;
 }
 
-/* 網站內容 */
-#content {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.logo {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
-.hero-section {
-    text-align: center;
-    margin-bottom: 50px;
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.hero-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin-left: 3rem;
 }
 
-.hero-section p {
-    font-size: 18px;
-    line-height: 1.6;
+.nav-list a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 1rem 0;
+  border-bottom: 2px solid transparent;
 }
 
-.contact-section {
-    text-align: center;
+.nav-list a:hover {
+  color: var(--primary-blue);
+  border-color: var(--secondary-blue);
 }
 
-.contact-section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+/* 語言切換 */
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
 }
 
-.contact-section p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.lang-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-blue);
+  border-radius: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+  background: var(--primary-blue);
+  color: var(--text-light);
+}
+
+/* 首頁橫幅 */
+.hero {
+  background: linear-gradient(rgba(43,122,158,0.9), rgba(142,202,230,0.9)),
+              url('clinic-bg.jpg') center/cover;
+  height: 70vh;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* 聯絡資訊卡 */
+.contact-card {
+  background: var(--text-light);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin: -5rem auto 3rem;
+  max-width: 600px;
+  position: relative;
+}
+
+.address {
+  display: none;
+}
+
+.address.active {
+  display: block;
+}
+
+/* 響應式設計 */
+@media (max-width: 992px) {
+  .nav-list {
+    display: none;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+  }
 }
