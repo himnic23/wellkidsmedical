@@ -15,7 +15,21 @@ function setLanguage(lang) {
 
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
+    const menuOverlay = document.querySelector('.menu-overlay');
     navLinks.classList.toggle('active');
+    
+    if (!menuOverlay) {
+        const overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+        overlay.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    }
+    
+    const overlay = document.querySelector('.menu-overlay');
+    overlay.classList.toggle('active');
 }
 
 // Initialize the page content

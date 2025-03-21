@@ -57,6 +57,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 0 1rem;
+    transition: transform 0.3s ease-in-out;
 }
 
 .nav-links a {
@@ -364,17 +365,36 @@ body {
 /* Hamburger menu icon */
 .menu-icon {
     display: none;
+    flex-direction: column;
+    gap: 6px;
     cursor: pointer;
     padding: 0.5rem;
-    margin-left: auto;
+    z-index: 1001;
 }
 
 .menu-icon div {
-    width: 25px;
+    width: 30px;
     height: 3px;
     background-color: var(--primary-color);
-    margin: 5px 0;
-    transition: 0.4s;
+    transition: all 0.3s;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -391,22 +411,22 @@ body {
     }
 
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
+        position: fixed;
+        top: 0;
+        right: -70%;
+        width: 70%;
+        height: 100vh;
         flex-direction: column;
         gap: 0;
         margin: 0;
-        width: 100%;
-        text-align: center;
+        padding-top: 60px;
         background-color: white;
-        box-shadow: 0 4px 12px var(--shadow-color);
+        box-shadow: -4px 0 12px var(--shadow-color);
+        transform: translateX(0);
     }
 
     .nav-links.active {
-        display: flex;
+        transform: translateX(-100%);
     }
 
     .nav-links a {
