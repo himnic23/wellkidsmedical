@@ -362,6 +362,79 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.6rem;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .menu-icon div {
+        width: 24px;
+    }
+
+    .nav-links {
+        width: 100%;
+        padding-top: 70px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section h1,
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .feature-card,
+    .doctor-card {
+        padding: 1.5rem;
+    }
+
+    .doctor-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.9rem;
+    }
+}
+
 /* Hamburger menu icon */
 .menu-icon {
     display: none;
@@ -400,61 +473,125 @@ body {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
-        padding: 1rem;
-        position: relative;
+        padding: 0.8rem;
+        position: fixed;
+        width: 100%;
+        background: white;
+        z-index: 1000;
         justify-content: space-between;
         align-items: center;
     }
 
+    .logo a {
+        font-size: 1.4rem;
+    }
+
     .menu-icon {
-        display: block;
+        display: flex;
+        z-index: 1002;
     }
 
     .nav-links {
         position: fixed;
         top: 0;
-        right: -70%;
-        width: 70%;
+        right: -100%;
+        width: 80%;
         height: 100vh;
         flex-direction: column;
         gap: 0;
         margin: 0;
-        padding-top: 60px;
+        padding-top: 80px;
         background-color: white;
         box-shadow: -4px 0 12px var(--shadow-color);
-        transform: translateX(0);
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
     }
 
     .nav-links.active {
-        transform: translateX(-100%);
+        right: 0;
     }
 
     .nav-links a {
-        padding: 1rem;
+        padding: 1.2rem;
+        width: 100%;
+        text-align: left;
         border-radius: 0;
         border-bottom: 1px solid var(--shadow-color);
+        font-size: 1.1rem;
     }
 
     .nav-links a:last-child {
         border-bottom: none;
     }
 
-    .features {
-        grid-template-columns: 1fr;
+    .language-switcher {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         padding: 1rem;
     }
 
-    .appointment-btn {
+    .language-switcher button {
         width: 100%;
-        text-align: center;
-        padding: 0.75rem !important;
+    }
+
+    .content {
+        padding: 1rem;
+        padding-top: 80px;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
+        border-radius: 0;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .features,
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .feature-card,
+    .doctor-card {
+        padding: 2rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .section h1,
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .doctor-card img {
+        width: 150px;
+        height: 150px;
     }
 }
