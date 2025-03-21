@@ -8,7 +8,7 @@ function getTranslation(key, lang) {
 }
 
 function setLanguage(lang) {
-    currentLanguage = lang;
+    currentLang = lang;
     updateContent();
     localStorage.setItem('language', lang);
 }
