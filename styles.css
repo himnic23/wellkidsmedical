@@ -78,6 +78,11 @@ body {
 
 
 
+.language-switcher {
+    display: flex;
+    gap: 1rem;
+}
+
 .language-switcher button {
     padding: 0.8rem 1.5rem;
     border: 2px solid var(--primary-color);
@@ -436,7 +441,23 @@ body {
     }
 
     .nav-links a:last-child {
-        border-bottom: none;
+        border-bottom: 1px solid var(--shadow-color);
+    }
+
+    .language-switcher {
+        position: fixed;
+        bottom: 0;
+        right: -70%;
+        width: 70%;
+        padding: 1rem;
+        background-color: white;
+        justify-content: center;
+        transform: translateX(0);
+        border-top: 1px solid var(--shadow-color);
+    }
+
+    .nav-links.active ~ .language-switcher {
+        transform: translateX(-100%);
     }
 
     .features {
