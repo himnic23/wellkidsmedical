@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "關於我們",
+    "services": "服務項目",
+    "doctors": "醫生團隊",
+    "contact": "聯絡我們",
+    "appointment": "預約掛號"
+  },
+  "home": {
+    "welcome": "歡迎來到兒童樂康醫療中心",
+    "subtitle": "您孩子的健康，我們的使命",
+    "description": "我們提供全面的兒科醫療服務，以兒童的舒適和健康為首要考慮。我們的醫療團隊專注於兒童保健，為您的寶寶提供最優質的醫療照護。",
+    "cta": "立即預約"
+  },
+  "about": {
+    "title": "關於兒童樂康醫療中心",
+    "mission": "我們的使命",
+    "mission_text": "以專業和關懷的態度為兒童提供卓越的醫療服務，讓每個孩子都能健康快樂成長。",
+    "vision": "我們的願景",
+    "vision_text": "成為備受信賴的兒童醫療中心，以創新的醫療技術和溫暖的照護環境，為兒童健康保駕護航。"
+  },
+  "services": {
+    "title": "兒科服務項目",
+    "general_medicine": "一般兒科",
+    "pediatrics": "新生兒護理",
+    "cardiology": "兒童心臟科",
+    "dermatology": "兒童皮膚科",
+    "orthopedics": "兒童骨科",
+    "description": "我們的專業兒科服務涵蓋從新生兒到青少年的全面醫療照護，為您的孩子提供最完善的健康保障。"
+  },
+  "doctors": {
+    "title": "認識我們的醫生",
+    "subtitle": "經驗豐富的醫療專業團隊"
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "address": "地址",
+    "phone": "電話",
+    "email": "電子郵件",
+    "hours": "營業時間"
+  },
+  "appointment": {
+    "title": "預約掛號",
+    "form": {
+      "name": "姓名",
+      "email": "電子郵件",
+      "phone": "聯絡電話",
+      "date": "預約日期",
+      "time": "預約時間",
+      "doctor": "選擇醫生",
+      "reason": "就診原因",
+      "submit": "提交預約"
+    }
+  }
+}

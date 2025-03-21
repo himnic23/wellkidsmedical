@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "doctors": "Our Doctors",
+    "contact": "Contact",
+    "appointment": "Book Appointment"
+  },
+  "home": {
+    "welcome": "Welcome to Well Kids Medical Centre",
+    "subtitle": "Your Child's Health, Our Priority",
+    "description": "We provide comprehensive pediatric care in a child-friendly environment. Our experienced team specializes in children's healthcare, from routine check-ups to specialized treatments.",
+    "cta": "Book an Appointment"
+  },
+  "about": {
+    "title": "About Well Kids Medical Centre",
+    "mission": "Our Mission",
+    "mission_text": "To provide exceptional healthcare services with compassion and expertise.",
+    "vision": "Our Vision",
+    "vision_text": "To be the leading healthcare provider, recognized for excellence in patient care."
+  },
+  "services": {
+    "title": "Our Pediatric Services",
+    "general_medicine": "General Pediatrics",
+    "pediatrics": "Newborn Care",
+    "cardiology": "Pediatric Cardiology",
+    "dermatology": "Pediatric Dermatology",
+    "orthopedics": "Pediatric Orthopedics",
+    "description": "Our specialized pediatric services are designed to provide comprehensive care for children from newborns to adolescents."
+  },
+  "doctors": {
+    "title": "Meet Our Pediatric Specialists",
+    "subtitle": "Expert Child Healthcare Professionals",
+    "description": "Our team of pediatric specialists is dedicated to providing the best care for your children in a friendly and comfortable environment."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening Hours"
+  },
+  "appointment": {
+    "title": "Book an Appointment",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "date": "Preferred Date",
+      "time": "Preferred Time",
+      "doctor": "Select Doctor",
+      "reason": "Reason for Visit",
+      "submit": "Submit Appointment"
+    }
+  }
+}

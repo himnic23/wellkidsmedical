@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Well Kids Medical Centre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Well Kids Medical Centre</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="about.html" data-i18n="nav.about">About</a>
+                <a href="services.html" data-i18n="nav.services">Services</a>
+                <a href="doctors.html" data-i18n="nav.doctors">Doctors</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </div>
+            <div class="language-switcher">
+                <button onclick="setLanguage('en')" id="enBtn">English</button>
+                <button onclick="setLanguage('zh')" id="zhBtn">中文</button>
+            </div>
+        </nav>
+        <main class="content">
+            <section class="section">
+                <div class="section-content">
+                    <h1 data-i18n="services.title">Our Pediatric Services</h1>
+                    <p data-i18n="services.description">Our specialized pediatric services are designed to provide comprehensive care for children from newborns to adolescents.</p>
+                    <div class="features">
+                        <div class="feature-card">
+                            <h3 data-i18n="services.general_medicine">General Pediatrics</h3>
+                            <p data-i18n="services.general_medicine_desc">Comprehensive medical care for children of all ages.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 data-i18n="services.pediatrics">Newborn Care</h3>
+                            <p data-i18n="services.pediatrics_desc">Specialized care for newborns and infants.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 data-i18n="services.cardiology">Pediatric Cardiology</h3>
+                            <p data-i18n="services.cardiology_desc">Expert care for children's heart conditions.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 data-i18n="services.dermatology">Pediatric Dermatology</h3>
+                            <p data-i18n="services.dermatology_desc">Treatment for children's skin conditions.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 data-i18n="services.orthopedics">Pediatric Orthopedics</h3>
+                            <p data-i18n="services.orthopedics_desc">Care for children's bone and joint issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-i18n="footer.address.title">Address</h3>
+                <p data-i18n="footer.address.street">789 Children's Health Way</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.appointment.title">Appointment Enquiry</h3>
+                <p><a href="tel:+85251183495" data-i18n="footer.appointment.phone">+852 51183495</a></p>
+                <p><a href="mailto:appointment@wellkidsmedical.com" data-i18n="footer.appointment.email">appointment@wellkidsmedical.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.social.title">Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" data-i18n="footer.social.facebook">Facebook</a>
+                    <a href="#" data-i18n="footer.social.instagram">Instagram</a>
+                    <a href="#" data-i18n="footer.social.twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="translations.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
