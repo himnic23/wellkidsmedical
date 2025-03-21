@@ -7,30 +7,15 @@ function getTranslation(key, lang) {
     return translation || key;
 }
 
-// Function to update all content with translations
 function setLanguage(lang) {
-    // Store language preference
+    currentLanguage = lang;
+    updateContent();
     localStorage.setItem('language', lang);
-    currentLang = lang;
-    document.documentElement.lang = lang;
+}
 
-    // Update button states
-    document.getElementById('enBtn').style.opacity = lang === 'en' ? '0.5' : '1';
-    document.getElementById('zhBtn').style.opacity = lang === 'zh' ? '0.5' : '1';
-
-    // Update all elements with data-i18n attribute
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        const translation = getTranslation(key, lang);
-        if (translation && translation !== key) {
-            if (element.tagName === 'A' && element.href) {
-                // Preserve href attribute for links
-                element.textContent = translation;
-            } else {
-                element.textContent = translation;
-            }
-        }
-    });
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
 }
 
 // Initialize the page content
