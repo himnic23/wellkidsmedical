@@ -7,8 +7,8 @@ const translations = {
             },
             appointment: {
                 title: "Appointment Enquiry",
-                phone: "+852 51183495",
-                email: "appointment@wellkidsmedical.com"
+                phone: "+852 23213318",
+                email: "wellkidsmc@gmail.com"
             },
             social: {
                 title: "Follow Us",
@@ -80,7 +80,7 @@ const translations = {
             },
             phone: {
                 title: 'Phone',
-                value: '+852 51183495'
+                value: '+852 23213318'
             },
             email: {
                 title: 'Email',
@@ -100,8 +100,8 @@ const translations = {
             },
             appointment: {
                 title: "預約查詢",
-                phone: "+852 51183495",
-                email: "appointment@wellkidsmedical.com"
+                phone: "+852 23213318",
+                email: "wellkidsmc@gmail.com"
             },
             social: {
                 title: "關注我們",
@@ -181,7 +181,7 @@ const translations = {
             },
             phone: {
                 title: '電話',
-                value: '+852 51183495'
+                value: '+852 23213318'
             },
             email: {
                 title: '電子郵件',
