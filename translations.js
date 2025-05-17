@@ -40,17 +40,17 @@ const translations = {
         },
         services: {
             title: "Our Pediatric Services",
-            description: "Our specialized pediatric services are designed to provide comprehensive care for children from newborns to adolescents.",
-            general_medicine: "General Pediatrics",
-            general_medicine_desc: "Comprehensive medical care for children of all ages.",
-            pediatrics: "Newborn Care",
-            pediatrics_desc: "Specialized care for newborns and infants.",
-            cardiology: "Pediatric Cardiology",
-            cardiology_desc: "Expert care for children's heart conditions.",
-            dermatology: "Pediatric Dermatology",
-            dermatology_desc: "Treatment for children's skin conditions.",
-            orthopedics: "Pediatric Orthopedics",
-            orthopedics_desc: "Care for children's bone and joint issues."
+            description: "We offer a variety of pediatric medical services, including:",
+            general_medicine: "Hong Kong Pediatric Specialist Clinic Services",
+            general_medicine_desc: "Developmental assessment, school entry physical examination, allergy testing, fever, and illness.",
+            pediatrics: "Vaccination",
+            pediatrics_desc: "Newborn babies, supplementary vaccines required in Hong Kong for foreign-born babies, and vaccines for studying abroad. We provide Department of Health designated vaccines for infants and school-age children, as well as additional preventive injections such as Japanese encephalitis, hepatitis A, meningitis, rotavirus, Haemophilus influenzae type b, etc.",
+            cardiology: "Breastfeeding Consultant",
+            cardiology_desc: "Internationally certified lactation consultants with knowledge of breastfeeding and extensive guidance experience to assist new mothers in breastfeeding with the correct posture.",
+            dermatology: "Speech Therapy",
+            dermatology_desc: "Speech therapists provide assessment and treatment for children with language development delays, pronunciation or voice disorders, and oral muscle problems.",
+            orthopedics: "Inpatient Services",
+            orthopedics_desc: "Newborn inpatient ward rounds, private hospital admission arrangements."
         },
         nav: {
             home: 'Home',
