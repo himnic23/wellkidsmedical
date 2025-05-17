@@ -422,44 +422,56 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: row;
+        flex-direction: column;
         padding: 1rem;
         position: relative;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap: 1rem;
     }
 
     .menu-icon {
-        display: block;
+        display: none;
     }
 
     .nav-links {
-        position: fixed;
-        top: 0;
-        right: -70%;
-        width: 70%;
-        height: 100vh;
-        flex-direction: column;
-        gap: 0;
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
         margin: 0;
-        padding-top: 60px;
+        padding: 0.5rem 0;
         background-color: white;
-        box-shadow: -4px 0 12px var(--shadow-color);
-        transform: translateX(0);
-    }
-
-    .nav-links.active {
-        transform: translateX(-100%);
+        box-shadow: none;
+        transform: none;
     }
 
     .nav-links a {
-        padding: 1rem;
-        border-radius: 0;
-        border-bottom: 1px solid var(--shadow-color);
+        padding: 0.5rem 0.8rem;
+        border-radius: 20px;
+        border: 1px solid var(--shadow-color);
+        font-size: 0.9rem;
+        white-space: nowrap;
     }
 
     .nav-links a:last-child {
-        border-bottom: none;
+        border: 1px solid var(--shadow-color);
+    }
+
+    .language-switcher {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .language-switcher button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 
     .features {
@@ -479,5 +491,9 @@ body {
 
     .hero p {
         font-size: 1.2rem;
+    }
+    
+    .content {
+        padding: 2rem 1rem;
     }
 }
