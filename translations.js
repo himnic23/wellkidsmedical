@@ -85,7 +85,7 @@ const translations = {
             },
             email: {
                 title: 'Email',
-                value: 'contact@wellkidsmedical.com'
+                value: 'wellkidsmc@gmail.com'
             },
             hours: {
                 title: 'Operating Hours',
@@ -187,7 +187,7 @@ const translations = {
             },
             email: {
                 title: '電子郵件',
-                value: 'contact@wellkidsmedical.com'
+                value: 'wellkidsmc@gmail.com'
             },
             hours: {
                 title: '營業時間',
