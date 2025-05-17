@@ -13,23 +13,10 @@ function setLanguage(lang) {
     localStorage.setItem('language', lang);
 }
 
+// 移除隱藏菜單功能，因為現在使用非隱藏式菜單
 function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    navLinks.classList.toggle('active');
-    
-    if (!menuOverlay) {
-        const overlay = document.createElement('div');
-        overlay.className = 'menu-overlay';
-        document.body.appendChild(overlay);
-        overlay.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-    }
-    
-    const overlay = document.querySelector('.menu-overlay');
-    overlay.classList.toggle('active');
+    // 此功能已不再需要，但保留函數以避免HTML中的onclick調用出錯
+    return;
 }
 
 // Initialize the page content
