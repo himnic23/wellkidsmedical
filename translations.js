@@ -20,7 +20,7 @@ const translations = {
         },
         home: {
             hero: {
-                title: "Welcome to Well Kids Medical Centre",
+                title: "Well Kids Medical Centre",
                 subtitle: "Your Health is Our Priority"
             },
             features: {
