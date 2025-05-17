@@ -13,8 +13,9 @@ const translations = {
             social: {
                 title: "Follow Us",
                 facebook: "Facebook",
-                instagram: "Instagram",
-                twitter: "Twitter"
+            instagram: "Instagram",
+            twitter: "Twitter",
+            whatsapp: "WhatsApp掃碼"
             }
         },
         home: {
@@ -106,8 +107,9 @@ const translations = {
             social: {
                 title: "關注我們",
                 facebook: "Facebook",
-                instagram: "Instagram",
-                twitter: "Twitter"
+            instagram: "Instagram",
+            twitter: "Twitter",
+            whatsapp: "WhatsApp掃碼"
             }
         },
         about: {
@@ -149,8 +151,8 @@ const translations = {
             cardiology_desc: "由擁有母乳餵哺知識和豐富指導經驗的國際認證泌乳顧問，輔助新手媽媽以正確姿勢餵哺母乳。",
             dermatology: "言語治療",
             dermatology_desc: "由言語治療師為有語言發展遲緩、發音或聲線障礙、口部肌肉等問題的兒童提供評估與治療。",
-            orthopedics: "兒科骨科",
-            orthopedics_desc: "為兒童骨骼和關節問題提供護理。"
+            orthopedics: "住院服務",
+            orthopedics_desc: "初生嬰兒住院巡房服務，私家醫院住院安排。"
         },
         nav: {
             home: '首頁',
