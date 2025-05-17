@@ -474,9 +474,16 @@ body {
         font-size: 0.9rem;
     }
 
-    .features {
+    .features, .doctors-grid {
         grid-template-columns: 1fr;
         padding: 1rem;
+        justify-items: center;
+    }
+    
+    .doctor-card {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .appointment-btn {
