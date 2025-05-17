@@ -190,7 +190,7 @@ body {
     box-shadow: 0 12px 25px var(--shadow-color);
 }
 
-.doctor-card img {
+.doctor-card > img {
     width: 220px;
     height: 280px;
     margin-bottom: 2rem;
@@ -199,6 +199,26 @@ body {
     object-position: center top;
     background-color: var(--background-light);
     box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.doctor-card .namecard {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.doctor-card .namecard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: transform 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.doctor-card .namecard img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px var(--shadow-color);
 }
 
 .doctor-card h3 {
