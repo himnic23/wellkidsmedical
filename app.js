@@ -34,7 +34,23 @@ function toggleMenu() {
 
 // Initialize the page content
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage(currentLang);
+    updateContent();
+    updateLanguageButton();
+    
+    // Close mobile menu when a link is clicked
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const mobileMenu = document.getElementById('navLinks');
+            const overlay = document.querySelector('.menu-overlay');
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                if (overlay) {
+                    overlay.classList.remove('active');
+                }
+            }
+        });
+    });
 });
 
 // Function to update the language button text
