@@ -2,8 +2,8 @@
 let currentLang = localStorage.getItem('language') || 'zh';
 
 // Function to get nested translations using dot notation
-function getTranslation(key, lang) {
-    const translation = key.split('.').reduce((obj, k) => obj && obj[k], translations[lang]);
+function getTranslation(key) {
+    const translation = key.split('.').reduce((obj, k) => obj && obj[k], translations[currentLang]);
     return translation || key;
 }
 
@@ -19,21 +19,12 @@ function toggleMenu() {
     return;
 }
 
-// Initialize the page content
-document.addEventListener('DOMContentLoaded', () => {
-    setLanguage(currentLang);
-});
-
 // Function to update the language button text
 function updateLanguageButton() {
     const langBtn = document.getElementById('langBtn');
-    langBtn.textContent = currentLang === 'en' ? '中文' : 'English';
-}
-
-// Function to get nested translations using dot notation
-function getTranslation(key) {
-    const translation = key.split('.').reduce((obj, k) => obj && obj[k], translations[currentLang]);
-    return translation || key;
+    if (langBtn) {
+        langBtn.textContent = currentLang === 'en' ? '中文' : 'English';
+    }
 }
 
 // Function to update all content with translations
@@ -50,12 +41,17 @@ function updateContent() {
         }
     });
     // Update button states
-    document.getElementById('enBtn').style.opacity = currentLang === 'en' ? '0.5' : '1';
-    document.getElementById('zhBtn').style.opacity = currentLang === 'zh' ? '0.5' : '1';
+    const enBtn = document.getElementById('enBtn');
+    const zhBtn = document.getElementById('zhBtn');
+    if (enBtn) enBtn.style.opacity = currentLang === 'en' ? '0.5' : '1';
+    if (zhBtn) zhBtn.style.opacity = currentLang === 'zh' ? '0.5' : '1';
 }
 
 // Initialize the page content
 document.addEventListener('DOMContentLoaded', () => {
-    updateContent();
+    // 確保初始化時設置正確的語言
+    // 不需要单独调用updateContent，因为setLanguage已经包含了这个调用
+    setLanguage(currentLang);
+    // 更新语言按钮
     updateLanguageButton();
 });
