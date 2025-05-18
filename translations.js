@@ -72,6 +72,14 @@ const translations = {
                 credentials: 'MBBS(HK),MRCPCH,FHKCPaed,FHKAM(Paediatrics),\nDCH(International)(RCPCH)DCH(HK)(HKCPaed)'
             }
         },
+        about: {
+            title: "About Well Kids Medical Centre",
+            description: "Well Kids Medical Centre is dedicated to providing exceptional pediatric healthcare services with a child-friendly approach. Our team of experienced pediatric professionals strives to deliver the highest quality care in a comfortable and welcoming environment.",
+            mission: "Our Mission",
+            mission_text: "To provide exceptional healthcare services with compassion and expertise.",
+            vision: "Our Vision",
+            vision_text: "To be the leading healthcare provider, recognized for excellence in patient care."
+        },
         contact: {
             title: 'Contact Us',
             intro: "We're here to help with your child's healthcare needs. Feel free to reach out to us through any of the following channels:",
