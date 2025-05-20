@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://wellkidsmc.com/sitemap.xml
+
+# Disallow access to specific files
+Disallow: /app.js
+Disallow: /translations.js
+Disallow: /styles.css
