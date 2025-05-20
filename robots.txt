@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://wellkidsmc.com/sitemap.xml
+Sitemap: https://wellkidsmedical.com/sitemap.xml
 
 # Disallow access to specific files
 Disallow: /app.js
