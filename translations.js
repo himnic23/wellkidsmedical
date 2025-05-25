@@ -84,7 +84,7 @@ const translations = {
             title: "Our Pediatric Services",
             description: "We offer a variety of pediatric medical services, including:",
             general_medicine: "Hong Kong Pediatric Specialist Clinic Services",
-            general_medicine_desc: "Developmental assessment, school entry physical examination, allergy testing, desensitization therapy, fever, and illness.",
+            general_medicine_desc: "Developmental assessment, school entry physical examination, allergy testing, allergen desensitization treatment, fever, and illness.",
             pediatrics: "Vaccination",
             pediatrics_desc: "Newborn babies, supplementary vaccines required in Hong Kong for foreign-born babies, and vaccines for studying abroad. We provide Department of Health designated vaccines for infants and school-age children, as well as additional preventive injections such as Japanese encephalitis, hepatitis A, meningitis, rotavirus, Haemophilus influenzae type b, etc.",
             cardiology: "Breastfeeding Consultant",
