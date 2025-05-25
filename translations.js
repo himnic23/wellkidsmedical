@@ -55,9 +55,8 @@ const translations = {
             social: {
                 title: "Follow Us",
                 facebook: "Facebook",
-            instagram: "Instagram",
-            twitter: "Twitter",
-            whatsapp: "WhatsApp掃碼"
+                instagram: "Instagram",
+                whatsapp: "WhatsApp掃碼"
             }
         },
         home: {
@@ -199,9 +198,8 @@ const translations = {
             social: {
                 title: "關注我們",
                 facebook: "Facebook",
-            instagram: "Instagram",
-            twitter: "Twitter",
-            whatsapp: "WhatsApp掃碼"
+                instagram: "Instagram",
+                whatsapp: "WhatsApp掃碼"
             }
         },
         about: {
@@ -224,7 +222,7 @@ const translations = {
                 },
                 care: {
                     title: "患者護理",
-                    description: "我們注重患者舒適度和個性化治療方案。"
+                    description: "我們注重患者舒適度及個性化治療方案。"
                 },
                 facilities: {
                     title: "現代設施",
