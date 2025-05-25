@@ -39,7 +39,7 @@ const translations = {
                 second_dose: "2nd Dose",
                 third_dose: "3rd Dose",
                 fourth_dose: "4th Dose",
-                included: "(Not required) - Already included in 6-in-1 vaccine"
+                included: "(Not required - Already included in 6-in-1 vaccine)"
             }
         },
         footer: {
@@ -183,7 +183,7 @@ const translations = {
                 second_dose: "第2次",
                 third_dose: "第3次",
                 fourth_dose: "第4次",
-                included: "(不用打)，已包含在六合一疫苗"
+                included: "(不用打，已包含在六合一疫苗)"
             }
         },
         footer: {
