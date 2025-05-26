@@ -276,6 +276,16 @@ body {
     margin-top: 4rem;
 }
 
+.footer-copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
