@@ -62,7 +62,7 @@ const translations = {
         home: {
             hero: {
                 title: "Well Kids Medical Centre",
-                subtitle: "Your Health is Our Priority"
+                subtitle: "Well Kids Medical Centre provides pediatric specialist outpatient services, neonatal jaundice treatment, emergency delivery visit services, newborn hospitalization rounds services, private hospital hospitalization arrangements."
             },
             features: {
                 expertise: {
@@ -213,7 +213,7 @@ const translations = {
         home: {
             hero: {
                 title: "允翹兒科中心",
-                subtitle: "允翹兒科中心提供兒科專科門診服務、新生嬰兒黃疸治療、緊急分娩到診服務、初生嬰兒住院巡房服務 (浸會醫院、聖德肋撒醫院(法國醫院))、私家醫院住院安排 ，聖德肋撒醫院(法國醫院)"
+                subtitle: "允翹兒科中心提供兒科專科門診服務、新生嬰兒黃疸治療、緊急分娩到診服務、初生嬰兒住院巡房服務 (浸會醫院、聖德肋撒醫院(法國醫院))、私家醫院住院安排 (聖德肋撒醫院(法國醫院))"
             },
             features: {
                 expertise: {
