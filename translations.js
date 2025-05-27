@@ -105,12 +105,12 @@ const translations = {
             doctor1: {
                 name: 'Dr. So Wing Yee',
                 specialty: 'Specialist Paediatrics',
-                credentials: 'MBBS(HK),MRCPCH,FHKCPaed,FHKAM(Paediatrics),\nDCH(International) (RCPCH)DCH(HK)(HKCPaed)'
+                credentials: 'MBBS(HK)\nMRCPCH\nFHKCPaed\nFHKAM(Paediatrics)\nDCH(International)(RCPCH)\nDCH(HK)(HKCPaed)'
             },
             doctor2: {
                 name: 'Dr. Tsang Chi Ho',
                 specialty: 'Specialist Paediatrics',
-                credentials: 'MBBS(HK),MRCPCH,FHKCPaed,FHKAM(Paediatrics),\nDCH(International)(RCPCH)DCH(HK)(HKCPaed)'
+                credentials: 'MBBS(HK)\nMRCPCH\nFHKCPaed\nFHKAM(Paediatrics)\nDCH(International)(RCPCH)\nDCH(HK)(HKCPaed)'
             }
         },
         about: {
