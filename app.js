@@ -47,11 +47,58 @@ function updateContent() {
     if (zhBtn) zhBtn.style.opacity = currentLang === 'zh' ? '0.5' : '1';
 }
 
-// Initialize the page content
+// Carousel functionality
+let slideIndex = 0;
+let slides = [];
+let dots = [];
+
+function showSlides() {
+    if (slides.length === 0) return; // Ensure slides are loaded
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+function plusSlides(n) {
+    slideIndex += n - 1; // Adjust slideIndex for direct jump or next/prev
+    if (slideIndex < 0) { slideIndex = slides.length - 1; } // Loop back if going below 0
+    else if (slideIndex >= slides.length) { slideIndex = 0; } // Loop to start if going past end
+
+    // Stop auto-play, show current slide, then restart auto-play
+    clearTimeout(showSlides.timer);
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].className += " active";
+    showSlides.timer = setTimeout(showSlides, 5000);
+}
+
+function currentSlide(n) {
+    plusSlides(n);
+}
+
+// Initialize the page content and carousel
 document.addEventListener('DOMContentLoaded', () => {
-    // 確保初始化時設置正確的語言
-    // 不需要单独调用updateContent，因为setLanguage已经包含了这个调用
     setLanguage(currentLang);
-    // 更新语言按钮
     updateLanguageButton();
+
+    // Initialize carousel elements after DOM is loaded
+    slides = document.getElementsByClassName("carousel-slide");
+    dots = document.getElementsByClassName("dot");
+    if (slides.length > 0) {
+        showSlides();
+    }
 });
