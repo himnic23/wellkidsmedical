@@ -315,6 +315,7 @@ body {
         flex-direction: column;
         padding: 2rem;
         box-shadow: 0 4px 12px var(--shadow-color);
+        text-align: center;
     }
 
     .nav-links.active {
@@ -341,6 +342,34 @@ body {
 
     .content {
         padding: 2rem 1rem;
+    }
+    
+    .features, .doctors-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+    
+    .section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    
+    .whatsapp-qr {
+        text-align: center;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-links {
+        justify-content: center;
     }
 }
 
