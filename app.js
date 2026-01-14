@@ -13,10 +13,10 @@ function setLanguage(lang) {
     localStorage.setItem('language', lang);
 }
 
-// 移除隱藏菜單功能，因為現在使用非隱藏式菜單
+// Function to toggle mobile menu
 function toggleMenu() {
-    // 此功能已不再需要，但保留函數以避免HTML中的onclick調用出錯
-    return;
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
 }
 
 // Function to update the language button text
