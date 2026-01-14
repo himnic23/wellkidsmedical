@@ -101,4 +101,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slides.length > 0) {
         showSlides();
     }
+
+    // Pop-up functionality
+    const popup = document.getElementById('greetingPopup');
+    
+    if (popup) {
+        // Show pop-up on load with fade-in
+        setTimeout(() => {
+            popup.classList.add('show');
+        }, 500); // Small delay for smoother effect
+
+        // Dismiss function
+        const dismissPopup = () => {
+            popup.classList.remove('show');
+        };
+
+        // Manual dismissal (click anywhere on overlay)
+        popup.addEventListener('click', dismissPopup);
+
+        // Automatic dismissal after 5 seconds (5000ms + 500ms delay)
+        setTimeout(() => {
+            if (popup.classList.contains('show')) {
+                dismissPopup();
+            }
+        }, 5500);
+    }
 });
