@@ -9,6 +9,7 @@ function getTranslation(key) {
 
 function setLanguage(lang) {
     currentLang = lang;
+    document.documentElement.lang = currentLang === 'en' ? 'en' : 'zh-HK';
     updateContent();
     localStorage.setItem('language', lang);
     closeMenu();
