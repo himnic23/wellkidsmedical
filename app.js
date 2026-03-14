@@ -16,7 +16,28 @@ function setLanguage(lang) {
 // Function to toggle mobile menu
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
+    const menuButton = document.querySelector('.menu-icon');
+
+    if (!navLinks) return;
+
     navLinks.classList.toggle('active');
+
+    if (menuButton) {
+        menuButton.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
+    }
+}
+
+function closeMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const menuButton = document.querySelector('.menu-icon');
+
+    if (!navLinks) return;
+
+    navLinks.classList.remove('active');
+
+    if (menuButton) {
+        menuButton.setAttribute('aria-expanded', 'false');
+    }
 }
 
 // Function to update the language button text
@@ -25,6 +46,13 @@ function updateLanguageButton() {
     if (langBtn) {
         langBtn.textContent = currentLang === 'en' ? '中文' : 'English';
     }
+}
+
+function updateLanguageButtons() {
+    document.querySelectorAll('[data-lang-button]').forEach(button => {
+        const targetLang = button.getAttribute('data-lang-button');
+        button.style.opacity = targetLang === currentLang ? '0.55' : '1';
+    });
 }
 
 function escapeHtml(value) {
@@ -47,6 +75,48 @@ function setTranslatedContent(element, translation) {
     element.textContent = translation;
 }
 
+function updateResponsiveTableLabels() {
+    document.querySelectorAll('.responsive-table').forEach(table => {
+        const headers = Array.from(table.querySelectorAll('thead th')).map((header) => header.textContent.trim());
+
+        table.querySelectorAll('tbody tr').forEach((row) => {
+            Array.from(row.children).forEach((cell, index) => {
+                if (cell.tagName === 'TD' && headers[index]) {
+                    cell.setAttribute('data-label', headers[index]);
+                }
+            });
+        });
+    });
+}
+
+function ensureMobileQuickBar() {
+    if (document.querySelector('.mobile-quick-bar')) return;
+
+    const quickBar = document.createElement('div');
+    quickBar.className = 'mobile-quick-bar';
+    quickBar.innerHTML = `
+        <a class="mobile-quick-link mobile-quick-call" href="tel:+85223213318" data-i18n="nav.cta_call">Call Clinic</a>
+        <a class="mobile-quick-link mobile-quick-whatsapp" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
+    `;
+
+    document.body.appendChild(quickBar);
+}
+
+function ensureMobileLanguageInline() {
+    const navLinks = document.getElementById('navLinks');
+
+    if (!navLinks || navLinks.querySelector('.mobile-language-inline')) return;
+
+    const languageGroup = document.createElement('div');
+    languageGroup.className = 'mobile-language-inline';
+    languageGroup.innerHTML = `
+        <button type="button" onclick="setLanguage('en')" data-lang-button="en">English</button>
+        <button type="button" onclick="setLanguage('zh')" data-lang-button="zh">中文</button>
+    `;
+
+    navLinks.insertBefore(languageGroup, navLinks.firstChild);
+}
+
 // Function to update all content with translations
 function updateContent() {
     document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -60,11 +130,9 @@ function updateContent() {
             }
         }
     });
-    // Update button states
-    const enBtn = document.getElementById('enBtn');
-    const zhBtn = document.getElementById('zhBtn');
-    if (enBtn) enBtn.style.opacity = currentLang === 'en' ? '0.5' : '1';
-    if (zhBtn) zhBtn.style.opacity = currentLang === 'zh' ? '0.5' : '1';
+
+    updateLanguageButtons();
+    updateResponsiveTableLabels();
 }
 
 // Carousel functionality
@@ -113,6 +181,8 @@ function currentSlide(n) {
 
 // Initialize the page content and carousel
 document.addEventListener('DOMContentLoaded', () => {
+    ensureMobileQuickBar();
+    ensureMobileLanguageInline();
     setLanguage(currentLang);
     updateLanguageButton();
 
@@ -123,4 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSlide(0);
         scheduleNextSlide();
     }
+
+    document.querySelectorAll('#navLinks a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
 });

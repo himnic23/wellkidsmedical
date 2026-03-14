@@ -18,29 +18,89 @@
             <div class="logo">
                 <a href="index.html"><img src="src/logo2.png" alt="Well Kids Medical Centre" style="height: 80px;"></a>
             </div>
-            <div class="menu-icon" onclick="toggleMenu()">
+            <button class="menu-icon" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </button>
             <div class="nav-links" id="navLinks">
                 <a href="index.html" data-i18n="nav.home">Home</a>
                 <a href="about.html" data-i18n="nav.about">About</a>
                 <a href="services.html" data-i18n="nav.services">Services</a>
                 <a href="doctors.html" data-i18n="nav.doctors">Doctors</a>
                 <a href="contact.html" data-i18n="nav.contact">Contact</a>
+                <div class="nav-mobile-actions">
+                    <a class="nav-action nav-action-call" href="tel:+85223213318" data-i18n="nav.cta_call">Call Clinic</a>
+                    <a class="nav-action nav-action-whatsapp" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
+                    <div class="nav-mobile-language">
+                        <button onclick="setLanguage('en')" data-lang-button="en">English</button>
+                        <button onclick="setLanguage('zh')" data-lang-button="zh">中文</button>
+                    </div>
+                </div>
             </div>
             <div class="language-switcher">
-                <button onclick="setLanguage('en')" id="enBtn">English</button>
-                <button onclick="setLanguage('zh')" id="zhBtn">中文</button>
+                <button onclick="setLanguage('en')" data-lang-button="en">English</button>
+                <button onclick="setLanguage('zh')" data-lang-button="zh">中文</button>
+            </div>
+            <div class="nav-cta">
+                <a class="nav-action nav-action-call" href="tel:+85223213318" data-i18n="nav.cta_call">Call Clinic</a>
+                <a class="nav-action nav-action-whatsapp" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
             </div>
         </nav>
-        <main class="content">
-            <section class="hero">
-                <h1 data-i18n="home.hero.title">Welcome to Well Kids Medical Centre</h1>
-                <p data-i18n="home.hero.subtitle">Your Health is Our Priority</p>
+        <main class="content home-content">
+            <section class="home-hero">
+                <div class="home-hero-copy">
+                    <p class="section-kicker" data-i18n="home.hero.kicker">Family-Focused Specialist Care</p>
+                    <h1 data-i18n="home.hero.title">Welcome to Well Kids Medical Centre</h1>
+                    <p class="home-hero-summary" data-i18n="home.hero.subtitle">Your Health is Our Priority</p>
+                    <div class="hero-points">
+                        <div class="hero-point" data-i18n="home.hero.point1">Specialist paediatric care for newborns, infants, children, and adolescents</div>
+                        <div class="hero-point" data-i18n="home.hero.point2">Vaccination support, developmental assessment, and hospital arrangements</div>
+                        <div class="hero-point" data-i18n="home.hero.point3">Warm clinic environment with clear appointment and enquiry channels</div>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="nav-action nav-action-call" href="tel:+85223213318" data-i18n="nav.cta_call">Call Clinic</a>
+                        <a class="nav-action nav-action-whatsapp" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
+                    </div>
+                </div>
+                <aside class="home-trust-panel">
+                    <h2 data-i18n="home.quick.title">Quick Contact</h2>
+                    <div class="trust-detail">
+                        <span data-i18n="contact.phone.title">Phone</span>
+                        <strong data-i18n="contact.phone.value">+852 23213318</strong>
+                        <p data-i18n="home.quick.phone_note">Best for appointments and urgent enquiries during clinic hours.</p>
+                    </div>
+                    <div class="trust-detail">
+                        <span data-i18n="contact.hours.title">Operating Hours</span>
+                        <strong data-i18n="home.quick.hours_note">Monday to Friday: 10:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 1:00 PM</strong>
+                    </div>
+                    <div class="trust-detail">
+                        <span data-i18n="contact.address.title">Address</span>
+                        <p data-i18n="contact.address.value">Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</p>
+                    </div>
+                    <div class="home-quick-qr">
+                        <a class="home-quick-qr-link" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp enquiry">
+                            <p class="home-quick-qr-label" data-i18n="footer.social.whatsapp">WhatsApp掃碼</p>
+                            <img src="./src/whatsappQR.jpg" alt="WhatsApp QR Code" width="150">
+                        </a>
+                    </div>
+                </aside>
             </section>
-            <section class="carousel-section">
+            <section class="trust-strip">
+                <div class="trust-card">
+                    <h3 data-i18n="home.features.expertise.title">Medical Expertise</h3>
+                    <p data-i18n="home.features.expertise.description">Our team of experienced doctors provides comprehensive medical care.</p>
+                </div>
+                <div class="trust-card">
+                    <h3 data-i18n="home.features.care.title">Patient Care</h3>
+                    <p data-i18n="home.features.care.description">We prioritize patient comfort and personalized treatment plans.</p>
+                </div>
+                <div class="trust-card">
+                    <h3 data-i18n="home.features.facilities.title">Modern Facilities</h3>
+                    <p data-i18n="home.features.facilities.description">State-of-the-art medical equipment and comfortable environment.</p>
+                </div>
+            </section>
+            <section class="carousel-section home-gallery">
                 <div class="carousel-container">
                     <div class="carousel-slide fade">
                         <img src="./src/clinic/clinic1.JPG" alt="Clinic Image 1">
@@ -72,19 +132,19 @@
                     <span class="dot" onclick="currentSlide(6)"></span>
                 </div>
             </section>
-            <section class="features">
-                <div class="feature-card">
-                    <h3 data-i18n="home.features.expertise.title">Medical Expertise</h3>
-                    <p data-i18n="home.features.expertise.description">Our team of experienced doctors provides comprehensive medical care.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-i18n="home.features.care.title">Patient Care</h3>
-                    <p data-i18n="home.features.care.description">We prioritize patient comfort and personalized treatment plans.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 data-i18n="home.features.facilities.title">Modern Facilities</h3>
-                    <p data-i18n="home.features.facilities.description">State-of-the-art medical equipment and comfortable environment.</p>
-                </div>
+            <section class="pathway-grid">
+                <a class="pathway-card" href="services.html">
+                    <h3 data-i18n="home.pathways.services_title">Services</h3>
+                    <p data-i18n="home.pathways.services_desc">Explore vaccination, breastfeeding, speech therapy, and inpatient support.</p>
+                </a>
+                <a class="pathway-card" href="doctors.html">
+                    <h3 data-i18n="home.pathways.doctors_title">Doctors</h3>
+                    <p data-i18n="home.pathways.doctors_desc">Meet our paediatric specialists and review their clinical credentials.</p>
+                </a>
+                <a class="pathway-card" href="contact.html">
+                    <h3 data-i18n="home.pathways.contact_title">Contact</h3>
+                    <p data-i18n="home.pathways.contact_desc">Call or WhatsApp us for appointments, directions, and general enquiries.</p>
+                </a>
             </section>
         </main>
     </div>
@@ -99,8 +159,10 @@
                 <p><a href="tel:+85223213318" data-i18n="footer.appointment.phone">+852 23213318</a></p>
                 <p><a href="mailto:wellkidsmc@gmail.com" data-i18n="footer.appointment.email">wellkidsmc@gmail.com</a></p>
                 <div class="whatsapp-qr">
-                    <p data-i18n="footer.social.whatsapp">WhatsApp掃碼</p>
-                    <img src="./src/whatsappQR.jpg" alt="WhatsApp QR Code" width="120">
+                    <a class="whatsapp-qr-link" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp enquiry">
+                        <p data-i18n="footer.social.whatsapp">WhatsApp掃碼</p>
+                        <img src="./src/whatsappQR.jpg" alt="WhatsApp QR Code" width="120">
+                    </a>
                 </div>
             </div>
             <div class="footer-section">

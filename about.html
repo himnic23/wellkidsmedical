@@ -18,35 +18,70 @@
             <div class="logo">
                 <a href="index.html"><img src="src/logo2.png" alt="Well Kids Medical Centre" style="height: 80px;"></a>
             </div>
-            <div class="menu-icon" onclick="toggleMenu()">
+            <button class="menu-icon" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </button>
             <div class="nav-links" id="navLinks">
                 <a href="index.html" data-i18n="nav.home">Home</a>
                 <a href="about.html" data-i18n="nav.about">About</a>
                 <a href="services.html" data-i18n="nav.services">Services</a>
                 <a href="doctors.html" data-i18n="nav.doctors">Doctors</a>
                 <a href="contact.html" data-i18n="nav.contact">Contact</a>
-            </div>
-            <div class="language-switcher">
-                <button onclick="setLanguage('en')" id="enBtn">English</button>
-                <button onclick="setLanguage('zh')" id="zhBtn">中文</button>
-            </div>
-        </nav>
-        <main class="content">
-            <section class="section">
-                <div class="section-content">
-                    <h1 data-i18n="about.title">About Us</h1>
-                    <p data-i18n="about.description">Well Kids Medical Centre is dedicated to providing exceptional pediatric healthcare services with a child-friendly approach. Our team of experienced pediatric professionals strives to deliver the highest quality care in a comfortable and welcoming environment.</p>
-                    <div class="mission-vision">
-                        <h2 data-i18n="about.mission">Our Mission</h2>
-                        <p data-i18n="about.mission_text">To provide exceptional healthcare services with compassion and expertise.</p>
-                        <h2 data-i18n="about.vision">Our Vision</h2>
-                        <p data-i18n="about.vision_text">To be the leading healthcare provider, recognized for excellence in patient care.</p>
+                <div class="nav-mobile-actions">
+                    <a class="nav-action nav-action-call" href="tel:+85223213318" data-i18n="nav.cta_call">Call Clinic</a>
+                    <a class="nav-action nav-action-whatsapp" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
+                    <div class="nav-mobile-language">
+                        <button onclick="setLanguage('en')" data-lang-button="en">English</button>
+                        <button onclick="setLanguage('zh')" data-lang-button="zh">中文</button>
                     </div>
                 </div>
+            </div>
+            <div class="language-switcher">
+                <button onclick="setLanguage('en')" data-lang-button="en">English</button>
+                <button onclick="setLanguage('zh')" data-lang-button="zh">中文</button>
+            </div>
+            <div class="nav-cta">
+                <a class="nav-action nav-action-call" href="tel:+85223213318" data-i18n="nav.cta_call">Call Clinic</a>
+                <a class="nav-action nav-action-whatsapp" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
+            </div>
+        </nav>
+        <main class="content page-content">
+            <section class="page-hero">
+                <div class="page-hero-copy">
+                    <p class="section-kicker" data-i18n="about.kicker">Family-Friendly. Professional. Trustworthy.</p>
+                    <h1 data-i18n="about.title">About Us</h1>
+                    <p class="page-lead" data-i18n="about.description">Well Kids Medical Centre is dedicated to providing exceptional pediatric healthcare services with a child-friendly approach. Our team of experienced pediatric professionals strives to deliver the highest quality care in a comfortable and welcoming environment.</p>
+                    <div class="hero-actions">
+                        <a class="nav-action nav-action-call" href="tel:+85223213318" data-i18n="nav.cta_call">Call Clinic</a>
+                        <a class="nav-action nav-action-whatsapp" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
+                    </div>
+                </div>
+                <aside class="page-hero-aside">
+                    <div class="mini-info-card">
+                        <h3 data-i18n="about.highlight1_title">Specialist Paediatrics</h3>
+                        <p data-i18n="about.highlight1_desc">Professional paediatric consultation and follow-up care for families who want clear, dependable advice.</p>
+                    </div>
+                    <div class="mini-info-card">
+                        <h3 data-i18n="about.highlight2_title">Support for Growing Families</h3>
+                        <p data-i18n="about.highlight2_desc">From newborn concerns to vaccination planning, we help parents navigate each stage with confidence.</p>
+                    </div>
+                    <div class="mini-info-card">
+                        <h3 data-i18n="about.highlight3_title">Convenient Enquiry Channels</h3>
+                        <p data-i18n="about.highlight3_desc">Appointments and general enquiries are easy to start by phone or WhatsApp.</p>
+                    </div>
+                </aside>
+            </section>
+            <section class="info-panel-grid">
+                <article class="info-panel">
+                    <h2 data-i18n="about.mission">Our Mission</h2>
+                    <p data-i18n="about.mission_text">To provide exceptional healthcare services with compassion and expertise.</p>
+                </article>
+                <article class="info-panel">
+                    <h2 data-i18n="about.vision">Our Vision</h2>
+                    <p data-i18n="about.vision_text">To be the leading healthcare provider, recognized for excellence in patient care.</p>
+                </article>
             </section>
         </main>
     </div>
@@ -61,8 +96,10 @@
                 <p><a href="tel:+85223213318" data-i18n="footer.appointment.phone">+852 23213318</a></p>
                 <p><a href="mailto:wellkidsmc@gmail.com" data-i18n="footer.appointment.email">wellkidsmc@gmail.com</a></p>
                 <div class="whatsapp-qr">
-                    <p data-i18n="footer.social.whatsapp">WhatsApp掃碼</p>
-                    <img src="./src/whatsappQR.jpg" alt="WhatsApp QR Code" width="120">
+                    <a class="whatsapp-qr-link" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp enquiry">
+                        <p data-i18n="footer.social.whatsapp">WhatsApp掃碼</p>
+                        <img src="./src/whatsappQR.jpg" alt="WhatsApp QR Code" width="120">
+                    </a>
                 </div>
             </div>
             <div class="footer-section">
