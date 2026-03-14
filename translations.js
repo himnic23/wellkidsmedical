@@ -122,8 +122,13 @@ const translations = {
             vision_text: "To be the leading healthcare provider, recognized for excellence in patient care."
         },
         contact: {
+            kicker: 'Appointments & Enquiries',
             title: 'Contact Us',
             intro: "We're here to help with your child's healthcare needs. Feel free to reach out to us through any of the following channels:",
+            booking: {
+                title: 'Need to make an appointment?',
+                description: 'Call us during clinic hours or send an email any time. We will help you arrange a suitable consultation slot.'
+            },
             address: {
                 title: 'Address',
                 value: "Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon"
@@ -265,8 +270,13 @@ const translations = {
             }
         },
         contact: {
+            kicker: '預約及查詢',
             title: '聯絡我們',
             intro: '我們隨時為您的孩子提供醫療保健服務。您可以透過以下方式聯絡我們：',
+            booking: {
+                title: '想安排預約或查詢診症？',
+                description: '歡迎於診症時間內致電，或隨時透過電郵與我們聯絡，我們會協助安排合適的應診時間。'
+            },
             address: {
                 title: '地址',
                 value: '九龍旺角彌敦道688號旺角中心807室'

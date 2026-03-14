@@ -35,30 +35,57 @@
                 <button onclick="setLanguage('zh')" id="zhBtn">中文</button>
             </div>
         </nav>
-        <main class="content">
-            <section class="section">
-                <div class="section-content">
+        <main class="content contact-page">
+            <section class="contact-hero-section">
+                <div class="contact-hero-copy">
+                    <p class="contact-kicker" data-i18n="contact.kicker">Appointments & Enquiries</p>
                     <h1 data-i18n="contact.title">Contact Us</h1>
-                    <p data-i18n="contact.intro">We're here to help with your child's healthcare needs. Feel free to reach out to us through any of the following channels:</p>
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <h3 data-i18n="contact.address.title">Address</h3>
-                            <p data-i18n="contact.address.value">Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</p>
-                        </div>
-                        <div class="contact-card">
-                            <h3 data-i18n="contact.phone.title">Phone</h3>
-                            <p data-i18n="contact.phone.value">+852 23213318</p>
-                        </div>
-                        <div class="contact-card">
-                            <h3 data-i18n="contact.email.title">Email</h3>
-                            <p data-i18n="contact.email.value">wellkidsmc@gmail.com</p>
-                        </div>
-                        <div class="contact-card">
-                            <h3 data-i18n="contact.hours.title">Operating Hours</h3>
-                            <p data-i18n="contact.hours.value">星期一至五：上午10:00 - 下午6:00<br>星期六：上午10:00 - 下午1:00<br>星期日及公眾假期：休息</p>
-                        </div>
+                    <p class="contact-intro" data-i18n="contact.intro">We're here to help with your child's healthcare needs. Feel free to reach out to us through any of the following channels:</p>
+                    <div class="contact-actions">
+                        <a class="contact-action contact-action-primary" href="tel:+85223213318">
+                            <span data-i18n="contact.phone.title">Phone</span>
+                            <strong data-i18n="contact.phone.value">+852 23213318</strong>
+                        </a>
+                        <a class="contact-action" href="mailto:wellkidsmc@gmail.com">
+                            <span data-i18n="contact.email.title">Email</span>
+                            <strong data-i18n="contact.email.value">wellkidsmc@gmail.com</strong>
+                        </a>
                     </div>
                 </div>
+                <aside class="contact-highlight">
+                    <h2 data-i18n="contact.booking.title">Need to make an appointment?</h2>
+                    <p data-i18n="contact.booking.description">Call us during clinic hours or send an email any time. We will help you arrange a suitable consultation slot.</p>
+                    <div class="contact-qr-panel">
+                        <p class="contact-qr-label" data-i18n="footer.social.whatsapp">WhatsApp掃碼</p>
+                        <img src="./src/whatsappQR.jpg" alt="WhatsApp QR Code" width="160">
+                    </div>
+                </aside>
+            </section>
+
+            <section class="contact-info">
+                <article class="contact-card contact-card-wide">
+                    <h3 data-i18n="contact.address.title">Address</h3>
+                    <p data-i18n="contact.address.value">Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon</p>
+                </article>
+                <article class="contact-card">
+                    <h3 data-i18n="contact.phone.title">Phone</h3>
+                    <p><a href="tel:+85223213318" data-i18n="contact.phone.value">+852 23213318</a></p>
+                </article>
+                <article class="contact-card">
+                    <h3 data-i18n="contact.email.title">Email</h3>
+                    <p><a href="mailto:wellkidsmc@gmail.com" data-i18n="contact.email.value">wellkidsmc@gmail.com</a></p>
+                </article>
+                <article class="contact-card contact-card-hours">
+                    <h3 data-i18n="contact.hours.title">Operating Hours</h3>
+                    <p data-i18n="contact.hours.value">星期一至五：上午10:00 - 下午6:00<br>星期六：上午10:00 - 下午1:00<br>星期日及公眾假期：休息</p>
+                </article>
+                <article class="contact-card contact-social-card">
+                    <h3 data-i18n="footer.social.title">Follow Us</h3>
+                    <div class="social-links contact-social-links">
+                        <a href="https://www.facebook.com/share/16o8fzx4JV/?mibextid=wwXIfr" data-i18n="footer.social.facebook">Facebook</a>
+                        <a href="https://www.instagram.com/wellkidsmc?igsh=MXVwdnk3ZjVkaThiYg==" data-i18n="footer.social.instagram">Instagram</a>
+                    </div>
+                </article>
             </section>
         </main>
     </div>
