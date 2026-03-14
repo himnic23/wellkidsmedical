@@ -11,6 +11,7 @@ function setLanguage(lang) {
     currentLang = lang;
     updateContent();
     localStorage.setItem('language', lang);
+    closeMenu();
 }
 
 // Function to toggle mobile menu
@@ -51,8 +52,16 @@ function updateLanguageButton() {
 function updateLanguageButtons() {
     document.querySelectorAll('[data-lang-button]').forEach(button => {
         const targetLang = button.getAttribute('data-lang-button');
-        button.style.opacity = targetLang === currentLang ? '0.55' : '1';
+        button.textContent = targetLang === 'en'
+            ? 'English'
+            : '中文';
+        button.style.display = targetLang === currentLang ? 'none' : 'inline-flex';
     });
+
+    const mobileLangToggle = document.querySelector('.mobile-lang-toggle');
+    if (mobileLangToggle) {
+        mobileLangToggle.textContent = currentLang === 'en' ? '中文' : 'English';
+    }
 }
 
 function escapeHtml(value) {
@@ -129,25 +138,41 @@ function ensureMobileQuickBar() {
     quickBar.className = 'mobile-quick-bar';
     quickBar.innerHTML = `
         <a class="mobile-quick-link mobile-quick-call" href="tel:+85223213318" data-i18n="nav.cta_call">Call Clinic</a>
-        <a class="mobile-quick-link mobile-quick-whatsapp" href="https://wa.me/85223213318" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
+        <a class="mobile-quick-link mobile-quick-whatsapp" href="https://wa.me/85269704813" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta_whatsapp">WhatsApp Enquiry</a>
     `;
 
     document.body.appendChild(quickBar);
 }
 
-function ensureMobileLanguageInline() {
-    const navLinks = document.getElementById('navLinks');
+function ensureMobileHeaderTools() {
+    const navbar = document.querySelector('.navbar');
+    const menuButton = document.querySelector('.menu-icon');
 
-    if (!navLinks || navLinks.querySelector('.mobile-language-inline')) return;
+    if (!navbar || !menuButton || navbar.querySelector('.mobile-header-tools')) return;
 
-    const languageGroup = document.createElement('div');
-    languageGroup.className = 'mobile-language-inline';
-    languageGroup.innerHTML = `
-        <button type="button" onclick="setLanguage('en')" data-lang-button="en">English</button>
-        <button type="button" onclick="setLanguage('zh')" data-lang-button="zh">中文</button>
+    const tools = document.createElement('div');
+    tools.className = 'mobile-header-tools';
+    tools.innerHTML = `
+        <button type="button" class="mobile-lang-toggle"></button>
+        <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     `;
 
-    navLinks.insertBefore(languageGroup, navLinks.firstChild);
+    const langButton = tools.querySelector('.mobile-lang-toggle');
+    const mobileMenuButton = tools.querySelector('.mobile-menu-toggle');
+
+    langButton.addEventListener('click', () => {
+        setLanguage(currentLang === 'en' ? 'zh' : 'en');
+    });
+
+    mobileMenuButton.addEventListener('click', () => {
+        toggleMenu();
+    });
+
+    navbar.appendChild(tools);
 }
 
 // Function to update all content with translations
@@ -216,9 +241,13 @@ function currentSlide(n) {
 // Initialize the page content and carousel
 document.addEventListener('DOMContentLoaded', () => {
     ensureMobileQuickBar();
-    ensureMobileLanguageInline();
+    ensureMobileHeaderTools();
     setLanguage(currentLang);
     updateLanguageButton();
+
+    if (window.location.hash === '#menu-open' && window.innerWidth <= 768) {
+        toggleMenu();
+    }
 
     // Initialize carousel elements after DOM is loaded
     slides = document.getElementsByClassName("carousel-slide");
@@ -233,6 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
+        updateLanguageButtons();
         if (window.innerWidth > 768) {
             closeMenu();
         }

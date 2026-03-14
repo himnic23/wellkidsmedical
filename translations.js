@@ -133,7 +133,7 @@ const translations = {
             title: 'Our Medical Team',
             kicker: 'Specialist Paediatric Team',
             intro: 'Our doctors combine specialist paediatric training with practical newborn, vaccination, and inpatient care support for families in Hong Kong.',
-            cta: 'Book an Appointment',
+            cta: 'Contact Doctor',
             doctor1: {
                 name: 'Dr. So Wing Yee',
                 specialty: 'Specialist Paediatrics',
@@ -335,7 +335,7 @@ const translations = {
             title: '我們的醫療團隊',
             kicker: '兒科專科醫生團隊',
             intro: '本中心醫生團隊具備兒科專科訓練，並提供新生嬰兒、疫苗接種及住院支援等臨床服務，協助家庭安心照顧孩子。',
-            cta: '預約診症',
+            cta: '聯絡醫生',
             doctor1: {
                 name: '蘇詠怡醫生',
                 specialty: '兒科專科醫生',
