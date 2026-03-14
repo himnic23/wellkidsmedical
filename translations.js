@@ -78,6 +78,31 @@ const translations = {
                 hours_note: "Monday to Friday: 10:00 AM - 6:00 PM\nSaturday: 10:00 AM - 1:00 PM",
                 location_note: "Convenient Mong Kok location"
             },
+            answers: {
+                kicker: "Verified Clinic Facts",
+                title: "Quick Answers Parents Often Ask",
+                intro: "These short answers help families and search tools quickly understand what the clinic offers.",
+                item1_title: "Clinic Type",
+                item1_text: "Family-friendly paediatric specialist clinic serving newborns, infants, children, and adolescents in Hong Kong.",
+                item2_title: "Location",
+                item2_text: "The clinic is in Mong Kok, Kowloon, at Room 807, Argyle Centre, 688 Nathan Road.",
+                item3_title: "How to Book",
+                item3_text: "Phone is best for appointment booking and urgent enquiries during clinic hours. WhatsApp is available for general enquiries.",
+                item4_title: "Key Services",
+                item4_text: "Paediatric consultations, childhood vaccinations, developmental assessment, breastfeeding support, speech therapy, and newborn or hospital support."
+            },
+            faq: {
+                kicker: "Common Questions",
+                title: "Useful Questions About the Clinic",
+                q1: "Where is Well Kids Medical Centre located?",
+                a1: "We are located at Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon.",
+                q2: "How can parents contact the clinic?",
+                a2: "Parents can call +852 23213318 for appointments and use WhatsApp for general enquiries.",
+                q3: "What services does the clinic provide?",
+                a3: "The clinic provides paediatric specialist consultations, vaccination services, developmental assessment, breastfeeding support, speech therapy, and newborn or inpatient support.",
+                q4: "Who are the doctors at the clinic?",
+                a4: "The clinic's medical team includes Dr. So Wing Yee and Dr. Tsang Chi Ho, both specialists in paediatrics."
+            },
             pathways: {
                 services_title: "Services",
                 services_desc: "Explore vaccination, breastfeeding, speech therapy, and inpatient support.",
@@ -279,6 +304,31 @@ const translations = {
                 phone_note: "診症預約及較緊急的查詢，建議於診症時間內致電。",
                 hours_note: "星期一至五：上午10:00 - 下午6:00\n星期六：上午10:00 - 下午1:00",
                 location_note: "九龍旺角"
+            },
+            answers: {
+                kicker: "診所重點資料",
+                title: "家長常問的快速答案",
+                intro: "以下重點資料有助家長及搜尋工具更快了解本中心的服務及聯絡方式。",
+                item1_title: "診所類型",
+                item1_text: "以家庭為本的兒科專科診所，為初生嬰兒、幼兒、兒童及青少年提供醫療服務。",
+                item2_title: "診所位置",
+                item2_text: "診所位於九龍旺角彌敦道688號旺角中心807室，交通方便。",
+                item3_title: "如何預約",
+                item3_text: "預約及較緊急查詢建議於診症時間內致電；一般問題可透過 WhatsApp 聯絡。",
+                item4_title: "主要服務",
+                item4_text: "提供兒科專科門診、兒童疫苗、發展評估、母乳支援、言語治療及新生嬰兒或住院支援服務。"
+            },
+            faq: {
+                kicker: "常見問題",
+                title: "關於本中心的常用問題",
+                q1: "允翹兒科中心位於哪裡？",
+                a1: "本中心位於九龍旺角彌敦道688號旺角中心807室。",
+                q2: "家長可如何聯絡診所？",
+                a2: "家長可致電 +852 23213318 預約診症，亦可透過 WhatsApp 作一般查詢。",
+                q3: "本中心提供哪些服務？",
+                a3: "本中心提供兒科專科門診、疫苗接種、發展評估、母乳支援、言語治療，以及新生嬰兒或住院支援服務。",
+                q4: "本中心有哪些醫生？",
+                a4: "本中心醫療團隊包括蘇詠怡醫生及曾志豪醫生，兩位均為兒科專科醫生。"
             },
             pathways: {
                 services_title: "服務項目",

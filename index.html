@@ -36,11 +36,64 @@
                     "@type": "MedicalClinic",
                     "@id": "https://wellkidsmedical.com/#clinic",
                     "name": "允翹兒科中心 Well Kids Medical Centre",
+                    "alternateName": "Well Kids Medical Centre",
                     "url": "https://wellkidsmedical.com/",
+                    "logo": "https://wellkidsmedical.com/src/logo2.png",
                     "image": "https://wellkidsmedical.com/src/clinic/clinic1.JPG",
                     "telephone": "+85223213318",
                     "email": "wellkidsmc@gmail.com",
                     "medicalSpecialty": "Pediatrics",
+                    "knowsAbout": [
+                        "Paediatrics",
+                        "Childhood vaccination",
+                        "Developmental assessment",
+                        "Breastfeeding support",
+                        "Speech therapy",
+                        "Newborn care",
+                        "Private hospital arrangements"
+                    ],
+                    "availableService": [
+                        {
+                            "@type": "Service",
+                            "name": "Paediatric specialist outpatient consultation"
+                        },
+                        {
+                            "@type": "Service",
+                            "name": "Childhood vaccination"
+                        },
+                        {
+                            "@type": "Service",
+                            "name": "Developmental assessment"
+                        },
+                        {
+                            "@type": "Service",
+                            "name": "Breastfeeding consultation"
+                        },
+                        {
+                            "@type": "Service",
+                            "name": "Speech therapy"
+                        },
+                        {
+                            "@type": "Service",
+                            "name": "Newborn inpatient rounds"
+                        },
+                        {
+                            "@type": "Service",
+                            "name": "Private hospital admission arrangements"
+                        }
+                    ],
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "telephone": "+85223213318",
+                            "contactType": "appointments",
+                            "areaServed": "HK",
+                            "availableLanguage": [
+                                "zh-HK",
+                                "en"
+                            ]
+                        }
+                    ],
                     "address": {
                         "@type": "PostalAddress",
                         "streetAddress": "Room 807, Argyle Centre, 688 Nathan Road",
@@ -80,6 +133,46 @@
                     },
                     "about": {
                         "@id": "https://wellkidsmedical.com/#clinic"
+                    }
+                }
+            ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Where is Well Kids Medical Centre located?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Well Kids Medical Centre is located at Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon, Hong Kong."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How can parents contact the clinic?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Parents can call +852 23213318 for appointments during clinic hours and use WhatsApp for general enquiries."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What services does the clinic provide?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The clinic provides paediatric specialist consultations, childhood vaccination, developmental assessment, breastfeeding support, speech therapy, newborn support, and private hospital arrangements."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who are the doctors at the clinic?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The clinic's medical team includes Dr. So Wing Yee and Dr. Tsang Chi Ho, both specialists in paediatrics."
                     }
                 }
             ]
@@ -174,6 +267,31 @@
                     <p data-i18n="home.features.facilities.description">State-of-the-art medical equipment and comfortable environment.</p>
                 </div>
             </section>
+            <section class="answer-section">
+                <div class="answer-section-header">
+                    <p class="section-kicker" data-i18n="home.answers.kicker">Verified Clinic Facts</p>
+                    <h2 data-i18n="home.answers.title">Quick Answers Parents Often Ask</h2>
+                    <p class="page-supporting" data-i18n="home.answers.intro">These short answers help families and search tools quickly understand what the clinic offers.</p>
+                </div>
+                <div class="answer-grid">
+                    <article class="answer-card">
+                        <h3 data-i18n="home.answers.item1_title">Clinic Type</h3>
+                        <p data-i18n="home.answers.item1_text">Family-friendly paediatric specialist clinic serving newborns, infants, children, and adolescents in Hong Kong.</p>
+                    </article>
+                    <article class="answer-card">
+                        <h3 data-i18n="home.answers.item2_title">Location</h3>
+                        <p data-i18n="home.answers.item2_text">The clinic is in Mong Kok, Kowloon, at Room 807, Argyle Centre, 688 Nathan Road.</p>
+                    </article>
+                    <article class="answer-card">
+                        <h3 data-i18n="home.answers.item3_title">How to Book</h3>
+                        <p data-i18n="home.answers.item3_text">Phone is best for appointment booking and urgent enquiries during clinic hours. WhatsApp is available for general enquiries.</p>
+                    </article>
+                    <article class="answer-card">
+                        <h3 data-i18n="home.answers.item4_title">Key Services</h3>
+                        <p data-i18n="home.answers.item4_text">Paediatric consultations, childhood vaccinations, developmental assessment, breastfeeding support, speech therapy, and newborn or hospital support.</p>
+                    </article>
+                </div>
+            </section>
             <section class="carousel-section home-gallery">
                 <div class="carousel-container">
                     <div class="carousel-slide fade">
@@ -219,6 +337,30 @@
                     <h3 data-i18n="home.pathways.contact_title">Contact</h3>
                     <p data-i18n="home.pathways.contact_desc">Call or WhatsApp us for appointments, directions, and general enquiries.</p>
                 </a>
+            </section>
+            <section class="faq-section">
+                <div class="answer-section-header">
+                    <p class="section-kicker" data-i18n="home.faq.kicker">Common Questions</p>
+                    <h2 data-i18n="home.faq.title">Useful Questions About the Clinic</h2>
+                </div>
+                <div class="faq-list">
+                    <article class="faq-item">
+                        <h3 data-i18n="home.faq.q1">Where is Well Kids Medical Centre located?</h3>
+                        <p data-i18n="home.faq.a1">We are located at Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3 data-i18n="home.faq.q2">How can parents contact the clinic?</h3>
+                        <p data-i18n="home.faq.a2">Parents can call +852 23213318 for appointments and use WhatsApp for general enquiries.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3 data-i18n="home.faq.q3">What services does the clinic provide?</h3>
+                        <p data-i18n="home.faq.a3">The clinic provides paediatric specialist consultations, vaccination services, developmental assessment, breastfeeding support, speech therapy, and newborn or inpatient support.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3 data-i18n="home.faq.q4">Who are the doctors at the clinic?</h3>
+                        <p data-i18n="home.faq.a4">The clinic's medical team includes Dr. So Wing Yee and Dr. Tsang Chi Ho, both specialists in paediatrics.</p>
+                    </article>
+                </div>
             </section>
         </main>
     </div>
