@@ -1227,6 +1227,10 @@ body {
     font-size: 0.95rem;
 }
 
+.vaccine-mobile-cards {
+    display: none;
+}
+
 .mobile-quick-bar {
     display: none;
 }
@@ -1249,6 +1253,7 @@ body {
         border-radius: 22px;
         flex-wrap: wrap;
         gap: 0.75rem;
+        position: static;
     }
 
     .logo img {
@@ -1256,7 +1261,16 @@ body {
     }
 
     .language-switcher {
-        display: none;
+        display: flex;
+        margin-left: auto;
+        gap: 0.3rem;
+    }
+
+    .language-switcher button {
+        padding: 0.28rem 0.45rem;
+        border-width: 1px;
+        font-size: 0.68rem;
+        box-shadow: none;
     }
 
     .menu-icon {
@@ -1264,32 +1278,36 @@ body {
     }
 
     .nav-links {
-        display: flex;
+        display: grid;
         flex: 0 0 100%;
         order: 2;
-        flex-direction: row;
+        grid-template-columns: 1fr;
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+        align-items: stretch;
         gap: 0.55rem;
-        padding: 0 0 0.2rem;
-        margin-top: 0.1rem;
-        background: transparent;
-        box-shadow: none;
-        text-align: left;
-        overflow-x: auto;
-        scrollbar-width: none;
-    }
-
-    .nav-links::-webkit-scrollbar {
-        display: none;
+        width: 100%;
+        padding: 0.7rem;
+        margin-top: 0.35rem;
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid rgba(79, 179, 217, 0.12);
+        border-radius: 20px;
+        box-shadow: 0 10px 22px rgba(79, 179, 217, 0.08);
+        text-align: center;
+        overflow: visible;
     }
 
     .nav-links a {
-        width: auto;
-        min-width: max-content;
-        padding: 0.8rem 0.95rem;
+        width: 100%;
+        min-width: 0;
+        padding: 0.75rem 0.55rem;
         border-radius: 18px;
         background: rgba(255, 255, 255, 0.9);
         box-shadow: none;
         border: 1px solid rgba(79, 179, 217, 0.14);
+        font-size: 0.82rem;
     }
 
     .nav-mobile-actions {
@@ -1297,8 +1315,9 @@ body {
     }
 
     .mobile-language-inline {
-        display: flex;
-        flex: 0 0 auto;
+        display: none;
+        grid-column: 1 / -1;
+        justify-content: flex-end;
         gap: 0.3rem;
     }
 
@@ -1401,50 +1420,58 @@ body {
         padding: 1.5rem 1rem;
     }
 
-    .responsive-table thead {
+    .table-container {
         display: none;
     }
 
-    .responsive-table,
-    .responsive-table tbody,
-    .responsive-table tr,
-    .responsive-table td {
-        display: block;
-        width: 100%;
+    .vaccine-mobile-cards {
+        display: grid;
+        gap: 1rem;
     }
 
-    .responsive-table tr {
-        margin-bottom: 1rem;
-        border-radius: 18px;
-        overflow: hidden;
+    .vaccine-mobile-card {
+        padding: 1rem;
+        border-radius: 20px;
         background: white;
-        box-shadow: 0 12px 26px rgba(79, 179, 217, 0.1);
         border: 1px solid rgba(79, 179, 217, 0.12);
+        box-shadow: 0 14px 28px rgba(79, 179, 217, 0.1);
     }
 
-    .responsive-table td {
-        position: relative;
-        padding: 1rem 1rem 1rem 7.25rem;
-        min-height: 4rem;
-        border: 0;
-        border-bottom: 1px solid #eef4f8;
-    }
-
-    .responsive-table td:last-child {
-        border-bottom: 0;
-    }
-
-    .responsive-table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 1rem;
-        top: 1rem;
-        width: 5.5rem;
+    .vaccine-mobile-age {
         color: var(--primary-color);
+        font-size: 1.15rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .vaccine-mobile-section + .vaccine-mobile-section {
+        margin-top: 0.9rem;
+        padding-top: 0.9rem;
+        border-top: 1px solid #e8f1f6;
+    }
+
+    .vaccine-mobile-label {
+        margin: 0 0 0.45rem;
+        color: #5f7c90;
         font-size: 0.78rem;
         font-weight: 800;
-        line-height: 1.4;
+        line-height: 1.5;
         text-transform: uppercase;
+    }
+
+    .vaccine-mobile-body {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--text-color);
+    }
+
+    .vaccine-mobile-body br {
+        display: block;
+        content: "";
+        margin-bottom: 0.3rem;
+    }
+
+    .vaccine-empty {
+        color: #7a8f9f;
     }
 
     .mobile-quick-bar {

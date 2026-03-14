@@ -89,6 +89,39 @@ function updateResponsiveTableLabels() {
     });
 }
 
+function renderVaccineMobileCards() {
+    const table = document.querySelector('.vaccine-table');
+    const container = document.querySelector('.vaccine-mobile-cards');
+
+    if (!table || !container) return;
+
+    const headers = Array.from(table.querySelectorAll('thead th')).map((header) => header.textContent.trim());
+    const rows = Array.from(table.querySelectorAll('tbody tr'));
+
+    container.innerHTML = rows.map((row) => {
+        const cells = Array.from(row.querySelectorAll('td'));
+        if (cells.length < 3) return '';
+
+        const ageGroup = cells[0].innerHTML.trim();
+        const governmentProgram = cells[1].innerHTML.trim() || '<span class="vaccine-empty">-</span>';
+        const enhancedProgram = cells[2].innerHTML.trim() || '<span class="vaccine-empty">-</span>';
+
+        return `
+            <article class="vaccine-mobile-card">
+                <h3 class="vaccine-mobile-age">${ageGroup}</h3>
+                <div class="vaccine-mobile-section">
+                    <p class="vaccine-mobile-label">${headers[1] || ''}</p>
+                    <div class="vaccine-mobile-body">${governmentProgram}</div>
+                </div>
+                <div class="vaccine-mobile-section">
+                    <p class="vaccine-mobile-label">${headers[2] || ''}</p>
+                    <div class="vaccine-mobile-body">${enhancedProgram}</div>
+                </div>
+            </article>
+        `;
+    }).join('');
+}
+
 function ensureMobileQuickBar() {
     if (document.querySelector('.mobile-quick-bar')) return;
 
@@ -133,6 +166,7 @@ function updateContent() {
 
     updateLanguageButtons();
     updateResponsiveTableLabels();
+    renderVaccineMobileCards();
 }
 
 // Carousel functionality
