@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <title>允翹兒科中心 | 兒童疫苗計劃 - 打印版</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 9.5pt; /* 放大字体大小约8% */
+            line-height: 1.2; /* 放大行高约8% */
+        }
+        .print-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* 调整为两端对齐 */
+            margin-bottom: 1cm;
+            padding: 0 1cm; /* 添加左右内边距 */
+        }
+        .print-header img {
+            height: 70px; /* 进一步放大logo */
+            margin-right: 0; /* 移除右侧间距 */
+        }
+        .print-header h1 {
+            flex-grow: 1; /* 允许标题占据剩余空间 */
+            text-align: center; /* 标题居中 */
+            font-size: 18pt; /* 调整标题字体大小 */
+            color: #0056b3; /* 添加标题颜色 */
+            margin-left: 1cm; /* 确保标题不会太靠近logo */
+            margin-right: 1cm; /* 确保标题不会太靠近右侧 */
+        }
+        .print-header p {
+            display: none;
+        }
+        .vaccine-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1cm;
+            page-break-inside: avoid;
+            border: 2px solid #0056b3; /* 添加表格边框颜色 */
+        }
+        .vaccine-table th, .vaccine-table td {
+            padding: 0.3cm; /* 放大单元格内边距约8% */
+            text-align: left;
+            border: 1px solid #a0c8e8; /* 调整单元格边框颜色 */
+            font-size: 9.5pt; /* 放大表格字体大小约8% */
+            color: #333; /* 调整字体颜色 */
+        }
+        .vaccine-table th {
+            background-color: #e0f2ff; /* 调整表头背景色 */
+            font-weight: bold;
+            color: #0056b3; /* 调整表头字体颜色 */
+        }
+        .vaccine-table tr:nth-child(even) {
+            background-color: #f5faff; /* 调整偶数行背景色 */
+        }
+        .print-footer {
+            text-align: center;
+            font-size: 9pt; /* 调整页脚字体大小 */
+            color: #555; /* 调整页脚字体颜色 */
+            margin-top: 1cm;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .print-footer p {
+            margin: 0 8px; /* 调整页脚段落间距 */
+            display: inline-block;
+        }
+        .print-footer img {
+            height: 65px; /* 调整WhatsApp QR code图片大小 */
+            vertical-align: middle;
+            margin: 0 8px;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header" style="display: flex; align-items: center;">
+    <img src="src/logo2.png" alt="Well Kids Medical Centre Logo">
+    <h1 style="text-align: center; flex-grow: 1; margin-right: calc(10% + 80px);">兒童疫苗計劃</h1>
+</div>
+
+                    <div class="table-container">
+                        <table class="vaccine-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="vaccine.table.age_group">年齡組別</th>
+                                    <th data-i18n="vaccine.table.govt_program">政府健康院疫苗計劃</th>
+                                    <th data-i18n="vaccine.table.enhanced_program">建議的疫苗計劃-加強保護</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-i18n="vaccine.table.newborn">初生</td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.bcg">卡介苗</span><br>
+                                        <span data-i18n="vaccine.table.hepb">乙型肝炎疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span>
+                                    </td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.bcg">卡介苗</span><br>
+                                        <span data-i18n="vaccine.table.hepb">乙型肝炎疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.one_month">一個月</td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.hepb">乙型肝炎疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span>
+                                    </td>
+                                    <td data-i18n="vaccine.table.included">(不用打 - 已包含在六合一疫苗)</td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.two_months">兩個月</td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.dtap_ipv">四合一疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span><br>
+                                        <span data-i18n="vaccine.table.pcv">肺炎球菌疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span>
+                                    </td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.six_in_one">六合一疫苗</span><br>
+                                        <span data-i18n="vaccine.table.rotavirus">口服輪狀病毒疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span><br>
+                                        <span data-i18n="vaccine.table.pcv">肺炎球菌疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.four_months">四個月</td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.dtap_ipv">四合一疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span><br>
+                                        <span data-i18n="vaccine.table.pcv">肺炎球菌疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span>
+                                    </td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.five_in_one">五合一疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span><br>
+                                        <span data-i18n="vaccine.table.rotavirus">口服輪狀病毒疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span><br>
+                                        <span data-i18n="vaccine.table.pcv">肺炎球菌疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.six_months">六個月</td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.dtap_ipv">四合一疫苗</span> - <span data-i18n="vaccine.table.third_dose">第3次</span><br>
+                                        <span data-i18n="vaccine.table.hepb">乙型肝炎疫苗</span> - <span data-i18n="vaccine.table.third_dose">第3次</span>
+                                    </td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.six_in_one">六合一疫苗</span> - <span data-i18n="vaccine.table.third_dose">第3次</span><br>
+                                        <span data-i18n="vaccine.table.rotavirus">口服輪狀病毒疫苗</span> - <span data-i18n="vaccine.table.third_dose">第3次</span><br>
+                                        <span data-i18n="vaccine.table.pcv">肺炎球菌疫苗</span> - <span data-i18n="vaccine.table.third_dose">第3次</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.nine_months">九個月</td>
+                                    <td></td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.je">日本腦炎疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span><br>
+                                        <span data-i18n="vaccine.table.menb">腦膜炎雙球菌疫苗 B型</span> - <span data-i18n="vaccine.table.first_dose">第1次</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.one_year">一歲</td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.mmr">麻疹、腮腺炎、德國麻疹混合疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span><br>
+                                        <span data-i18n="vaccine.table.pcv">肺炎球菌疫苗</span> - <span data-i18n="vaccine.table.booster">加強劑</span><br>
+                                        <span data-i18n="vaccine.table.varicella">水痘疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span>
+                                    </td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.mmrv">麻疹、腮腺炎、德國麻疹及水痘混合疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span><br>
+                                        <span data-i18n="vaccine.table.menc">腦膜炎雙球菌疫苗ACWY型</span> - <span data-i18n="vaccine.table.first_dose">第1次</span><br>
+                                        <span data-i18n="vaccine.table.pcv">肺炎球菌疫苗</span> - <span data-i18n="vaccine.table.booster">加強劑</span><br>
+                                        <span data-i18n="vaccine.table.hepa">甲型肝炎疫苗</span> - <span data-i18n="vaccine.table.first_dose">第1次</span><br>
+                                        <span data-i18n="vaccine.table.menb">腦膜炎雙球菌疫苗 B型</span> - <span data-i18n="vaccine.table.second_dose">第2次</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.fifteen_months">十五個月</td>
+                                    <td></td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.menb">腦膜炎雙球菌疫苗 B型</span> - <span data-i18n="vaccine.table.third_dose">第3次</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.eighteen_months">十八個月</td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.dtap_ipv">四合一疫苗</span> - <span data-i18n="vaccine.table.booster">加強劑</span><br>
+                                        <span data-i18n="vaccine.table.mmr">麻疹、腮腺炎、德國麻疹混合疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span>
+                                    </td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.five_in_one">五合一疫苗</span> - <span data-i18n="vaccine.table.fourth_dose">第4次</span><br>
+                                        <span data-i18n="vaccine.table.mmrv">麻疹、腮腺炎、德國麻疹及水痘混合疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="vaccine.table.two_years">兩歲</td>
+                                    <td></td>
+                                    <td>
+                                        <span data-i18n="vaccine.table.je">日本腦炎疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span><br>
+                                        <span data-i18n="vaccine.table.hepa">甲型肝炎疫苗</span> - <span data-i18n="vaccine.table.second_dose">第2次</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="print-footer">
+        <p>電話: +852 23213318</p>
+        <p>電郵: wellkidsmc@gmail.com</p>
+        <p>地址: 旺角彌敦道688號旺角中心807室</p>
+        <p><img src="src/whatsappQR.jpg" alt="WhatsApp QR Code"></p>
+        <p><br>&copy; 2025 允翹兒科中心 Well Kids Medical Centre</p>
+    </div>
+    <div class="no-print" style="text-align: center; margin-top: 20px;">
+        <button onclick="window.print()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">打印此頁</button>
+    </div>
+</body>
+</html>

@@ -27,6 +27,26 @@ function updateLanguageButton() {
     }
 }
 
+function escapeHtml(value) {
+    return value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function setTranslatedContent(element, translation) {
+    const shouldPreserveLineBreaks = translation.includes('\n') || element.innerHTML.includes('<br>');
+
+    if (shouldPreserveLineBreaks) {
+        element.innerHTML = escapeHtml(translation).replace(/\n/g, '<br>');
+        return;
+    }
+
+    element.textContent = translation;
+}
+
 // Function to update all content with translations
 function updateContent() {
     document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -36,7 +56,7 @@ function updateContent() {
             if (element.tagName === 'A' && element.href) {
                 element.textContent = translation;
             } else {
-                element.textContent = translation;
+                setTranslatedContent(element, translation);
             }
         }
     });
@@ -51,43 +71,44 @@ function updateContent() {
 let slideIndex = 0;
 let slides = [];
 let dots = [];
+let carouselTimer;
 
-function showSlides() {
-    if (slides.length === 0) return; // Ensure slides are loaded
+function renderSlide(index) {
+    if (slides.length === 0) return;
+
+    slideIndex = (index + slides.length) % slides.length;
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
+
     for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 5000); // Change image every 5 seconds
+
+    slides[slideIndex].style.display = "block";
+
+    if (dots[slideIndex]) {
+        dots[slideIndex].className += " active";
+    }
+}
+
+function scheduleNextSlide() {
+    clearTimeout(carouselTimer);
+    carouselTimer = setTimeout(() => {
+        renderSlide(slideIndex + 1);
+        scheduleNextSlide();
+    }, 5000);
 }
 
 function plusSlides(n) {
-    slideIndex += n - 1; // Adjust slideIndex for direct jump or next/prev
-    if (slideIndex < 0) { slideIndex = slides.length - 1; } // Loop back if going below 0
-    else if (slideIndex >= slides.length) { slideIndex = 0; } // Loop to start if going past end
-
-    // Stop auto-play, show current slide, then restart auto-play
-    clearTimeout(showSlides.timer);
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex].style.display = "block";
-    dots[slideIndex].className += " active";
-    showSlides.timer = setTimeout(showSlides, 5000);
+    renderSlide(slideIndex + n);
+    scheduleNextSlide();
 }
 
 function currentSlide(n) {
-    plusSlides(n);
+    renderSlide(n - 1);
+    scheduleNextSlide();
 }
 
 // Initialize the page content and carousel
@@ -99,31 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slides = document.getElementsByClassName("carousel-slide");
     dots = document.getElementsByClassName("dot");
     if (slides.length > 0) {
-        showSlides();
-    }
-
-    // Pop-up functionality
-    const popup = document.getElementById('greetingPopup');
-    
-    if (popup) {
-        // Show pop-up on load with fade-in
-        setTimeout(() => {
-            popup.classList.add('show');
-        }, 500); // Small delay for smoother effect
-
-        // Dismiss function
-        const dismissPopup = () => {
-            popup.classList.remove('show');
-        };
-
-        // Manual dismissal (click anywhere on overlay)
-        popup.addEventListener('click', dismissPopup);
-
-        // Automatic dismissal after 5 seconds (5000ms + 500ms delay)
-        setTimeout(() => {
-            if (popup.classList.contains('show')) {
-                dismissPopup();
-            }
-        }, 5500);
+        renderSlide(0);
+        scheduleNextSlide();
     }
 });
