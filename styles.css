@@ -527,7 +527,7 @@ body {
     }
 
     .logo img {
-        height: 56px !important;
+        height: 60px !important;
     }
 
     .menu-icon {
@@ -1318,10 +1318,11 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        width: calc(100% - 20px);
-        margin-top: 0.6rem;
-        padding: 0.8rem 6.75rem 0.8rem 0.85rem;
-        border-radius: 22px;
+        width: calc(100% - 16px);
+        min-height: 84px;
+        margin-top: 0.55rem;
+        padding: 0.95rem 9.1rem 0.95rem 1rem;
+        border-radius: 24px;
         position: sticky;
         top: 0.6rem;
         display: flex;
@@ -1333,8 +1334,13 @@ body {
         min-width: 0;
     }
 
+    .logo a {
+        display: inline-flex;
+        align-items: center;
+    }
+
     .logo img {
-        height: 46px !important;
+        height: 66px !important;
     }
 
     .language-switcher,
@@ -1344,11 +1350,12 @@ body {
 
     .mobile-header-tools {
         position: absolute;
-        top: 0.68rem;
-        right: 0.75rem;
+        top: 50%;
+        right: 0.9rem;
+        transform: translateY(-50%);
         display: inline-flex;
         align-items: center;
-        gap: 0.3rem;
+        gap: 0.45rem;
         z-index: 230;
     }
 
@@ -1364,27 +1371,27 @@ body {
     }
 
     .mobile-lang-toggle {
-        min-width: 4.2rem;
-        height: 2rem;
-        padding: 0 0.5rem;
+        min-width: 5.2rem;
+        height: 2.65rem;
+        padding: 0 0.78rem;
         border-radius: 999px;
-        font-size: 0.62rem;
+        font-size: 0.76rem;
         font-weight: 800;
     }
 
     .mobile-menu-toggle {
-        width: 2.35rem;
-        height: 2.35rem;
-        padding: 0.35rem;
-        border-radius: 12px;
+        width: 2.85rem;
+        height: 2.85rem;
+        padding: 0.48rem;
+        border-radius: 14px;
         flex-direction: column;
-        gap: 3px;
+        gap: 4px;
     }
 
     .mobile-menu-toggle span {
         display: block;
-        width: 16px;
-        height: 2px;
+        width: 18px;
+        height: 2.4px;
         background: var(--primary-color);
         border-radius: 999px;
     }
@@ -1594,33 +1601,33 @@ body {
 
 @media (max-width: 420px) {
     .navbar {
-        padding-right: 7rem;
+        min-height: 78px;
+        padding-right: 8.2rem;
     }
 
     .logo img {
-        height: 40px !important;
+        height: 60px !important;
     }
 
     .mobile-header-tools {
-        top: 0.62rem;
-        right: 0.6rem;
-        gap: 0.22rem;
+        right: 0.72rem;
+        gap: 0.34rem;
     }
 
     .mobile-lang-toggle {
-        min-width: 3.7rem;
-        height: 1.9rem;
-        padding: 0 0.42rem;
-        font-size: 0.58rem;
+        min-width: 4.55rem;
+        height: 2.4rem;
+        padding: 0 0.64rem;
+        font-size: 0.7rem;
     }
 
     .mobile-menu-toggle {
-        width: 2.1rem;
-        height: 2.1rem;
-        padding: 0.28rem;
+        width: 2.55rem;
+        height: 2.55rem;
+        padding: 0.38rem;
     }
 
     .mobile-menu-toggle span {
-        width: 14px;
+        width: 17px;
     }
 }
