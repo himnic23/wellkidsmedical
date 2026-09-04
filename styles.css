@@ -1283,7 +1283,7 @@ body {
 
 .doctor-professional-details {
     display: grid;
-    gap: 0.18rem;
+    gap: 0;
 }
 
 .doctor-professional-details h3,
@@ -1298,6 +1298,7 @@ body {
 
 .doctor-profile-intro .doctor-appointments {
     white-space: pre-line;
+    margin-top: 0.3rem;
     color: #5a7386;
     font-size: 0.9rem;
     line-height: 1.55;

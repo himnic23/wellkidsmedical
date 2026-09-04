@@ -519,7 +519,7 @@ const translations = {
             doctor2: {
                 name: '曾志豪醫生',
                 specialty: '兒科專科醫生',
-                appointments: '聖德肋撒醫院榮譽顧問醫生\nHonorary Consultant in Paediatrics, St. Teresa\'s Hospital\n香港中文大學兒科學系名譽臨床助理教授\nHonorary Clinical Assistant Professor, Department of Paediatrics (CUHK)',
+                appointments: '聖德肋撒醫院兒科榮譽顧問醫生\nHonorary Consultant in Paediatrics, St. Teresa\'s Hospital\n香港中文大學兒科學系名譽臨床助理教授\nHonorary Clinical Assistant Professor, Department of Paediatrics (CUHK)',
                 credentials: '香港大學内外全科醫學士\n英國皇家兒科醫學院院員\n香港兒科醫學院院士\n香港醫學專科學院院士（兒科）\n英國皇家兒科醫學院兒科文憑（國際）\n香港兒科醫學院兒科文憑（香港）'
             }
         },
