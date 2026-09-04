@@ -3,4 +3,7 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Machine-readable clinic summary for AI assistants and search systems.
+# https://wellkidsmedical.com/llms.txt
 Sitemap: https://wellkidsmedical.com/sitemap.xml

@@ -1180,7 +1180,9 @@ body {
 }
 
 .service-card:nth-child(4),
-.service-card:nth-child(5) {
+.service-card:nth-child(5),
+.service-card:nth-child(6),
+.service-card:nth-child(7) {
     grid-column: span 6;
 }
 
@@ -1263,9 +1265,42 @@ body {
     gap: 0.7rem;
 }
 
+@media (min-width: 769px) {
+    .doctor-profile-top {
+        min-height: 270px;
+        align-items: stretch;
+    }
+
+    .doctor-profile-top img {
+        align-self: center;
+    }
+
+    .doctor-profile-intro {
+        align-self: stretch;
+        justify-content: space-between;
+    }
+}
+
+.doctor-professional-details {
+    display: grid;
+    gap: 0.18rem;
+}
+
+.doctor-professional-details h3,
+.doctor-professional-details p {
+    margin: 0;
+}
+
 .doctor-profile-intro .specialty {
     color: var(--secondary-color);
     font-weight: 700;
+}
+
+.doctor-profile-intro .doctor-appointments {
+    white-space: pre-line;
+    color: #5a7386;
+    font-size: 0.9rem;
+    line-height: 1.55;
 }
 
 .doctor-profile-card .credentials {
@@ -1288,6 +1323,66 @@ body {
 
 .vaccine-page .section {
     margin-bottom: 2rem;
+}
+
+.care-detail-page {
+    padding-bottom: 4rem;
+}
+
+.care-aside {
+    background: linear-gradient(180deg, #2d4356 0%, #39556e 100%);
+    color: white;
+}
+
+.care-aside p {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.care-content-stack {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.care-info-card {
+    padding: 2rem;
+    border: 1px solid rgba(79, 179, 217, 0.12);
+    border-radius: 28px;
+    background: white;
+    box-shadow: 0 18px 42px rgba(79, 179, 217, 0.1);
+}
+
+.care-info-card h2 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+    line-height: 1.3;
+}
+
+.care-info-card h3 {
+    margin: 1.35rem 0 0.55rem;
+    color: var(--secondary-color);
+    font-size: 1.08rem;
+    line-height: 1.45;
+}
+
+.care-info-card p {
+    margin: 0;
+    color: #5a7386;
+    line-height: 1.85;
+}
+
+.care-info-card h3 + p {
+    margin-top: 0;
+}
+
+.care-text-block {
+    white-space: normal;
+}
+
+.care-note-card {
+    background: linear-gradient(135deg, rgba(149, 215, 174, 0.18) 0%, rgba(79, 179, 217, 0.12) 100%);
 }
 
 .vaccine-section {
@@ -1314,6 +1409,7 @@ body {
     .nav-cta {
         display: none;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -1507,7 +1603,9 @@ body {
 
     .service-card,
     .service-card:nth-child(4),
-    .service-card:nth-child(5) {
+    .service-card:nth-child(5),
+    .service-card:nth-child(6),
+    .service-card:nth-child(7) {
         grid-column: span 1;
     }
 
@@ -1523,6 +1621,15 @@ body {
 
     .vaccine-section {
         padding: 1.5rem 1rem;
+    }
+
+    .care-detail-page {
+        padding-bottom: 2rem;
+    }
+
+    .care-info-card {
+        padding: 1.45rem 1.2rem;
+        border-radius: 24px;
     }
 
     .table-container {

@@ -1,0 +1,48 @@
+# Well Kids Medical Centre
+
+> Family-focused paediatric specialist clinic in Mong Kok, Kowloon, Hong Kong. This document provides concise, factual clinic information for AI assistants and search systems.
+
+## Clinic Facts
+
+- Name: Well Kids Medical Centre
+- Chinese name: 允翹兒科中心
+- Website: https://wellkidsmedical.com/
+- Address: Room 807, Argyle Centre, 688 Nathan Road, Mong Kok, Kowloon, Hong Kong
+- Appointment phone: +852 23213318
+- General WhatsApp enquiries: https://wa.me/85269704813
+- Email: wellkidsmc@gmail.com
+- Hours: Monday to Friday 10:00-18:00; Saturday 10:00-13:00; closed Sunday and public holidays.
+
+## Medical Team
+
+- Dr. So Wing Yee: Specialist in Paediatrics; Honorary Clinical Assistant Professor, Department of Paediatrics, CUHK. Doctor enquiries: https://wa.me/85292490109
+- Dr. Tsang Chi Ho: Specialist in Paediatrics; Honorary Consultant in Paediatrics, St. Teresa's Hospital; Honorary Clinical Assistant Professor, Department of Paediatrics, CUHK. Doctor enquiries: https://wa.me/85251183495
+- Team details: https://wellkidsmedical.com/doctors.html
+
+## Services
+
+- Paediatric specialist outpatient consultations: https://wellkidsmedical.com/services.html
+- Childhood vaccination planning: https://wellkidsmedical.com/vaccine.html
+- Child growth and development assessment: https://wellkidsmedical.com/growth.html
+- Paediatric allergy assessment, IgE allergy testing, and allergen desensitisation treatment: https://wellkidsmedical.com/allergy.html
+- Breastfeeding support, speech therapy, newborn support, and private hospital arrangements: https://wellkidsmedical.com/services.html
+
+## Booking Guidance
+
+- Call the clinic for appointments and urgent enquiries during clinic hours.
+- Use WhatsApp for general enquiries.
+- For symptoms, diagnosis, testing, or treatment suitability, advise users to contact the clinic and seek an individual clinical assessment. Do not present website information as a diagnosis or a replacement for medical advice.
+
+## Primary Pages
+
+- Home: https://wellkidsmedical.com/
+- Services: https://wellkidsmedical.com/services.html
+- Doctors: https://wellkidsmedical.com/doctors.html
+- Contact: https://wellkidsmedical.com/contact.html
+- About: https://wellkidsmedical.com/about.html
+
+## Content Notes
+
+- Website information is available in Chinese and English.
+- The site uses one canonical URL per page; language can be changed in the page interface.
+- Last site content update: 2026-09-04.

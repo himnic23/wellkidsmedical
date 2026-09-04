@@ -46,6 +46,63 @@ const translations = {
                 included: "(Not required - Already included in 6-in-1 vaccine)"
             }
         },
+        growth: {
+            kicker: "Supporting Healthy Growth",
+            title: "Child Growth and Development Assessment",
+            intro: "Growth and development are important concerns for many parents. If a child may have growth delay or short stature, a medical assessment can help clarify possible causes and next steps.",
+            contact_title: "Have a growth concern?",
+            contact_text: "Contact the clinic to arrange an assessment and discuss your child's individual needs with a doctor.",
+            overview_title: "When to seek an assessment",
+            overview_text: "Children's growth and development are important to many parents. Short stature, clinically often defined as height below the 3rd percentile for children of the same age and sex, can result from multiple factors. If growth delay is suspected, seek professional medical advice for assessment and investigation.",
+            causes_title: "Common causes of short stature",
+            non_pathological_title: "Non-pathological factors (the majority)",
+            non_pathological_text: "• Familial short stature: When parents are shorter, a child's genetically determined growth curve may be lower while development progresses normally.\n• Constitutional growth delay: Often described as being a late bloomer. Bone age is usually younger than chronological age; although a child may be shorter in early years, puberty comes later and final adult height can often reach the expected range.",
+            pathological_title: "Pathological and endocrine factors",
+            pathological_text: "• Growth hormone deficiency (GHD): The pituitary gland does not produce enough growth hormone.\n• Idiopathic short stature (ISS): Height is clearly below the usual range without an identifiable cause.\n• Genetic and chromosomal conditions: Such as Turner syndrome and Prader-Willi syndrome.\n• Other systemic conditions: Chronic kidney disease, poor gastrointestinal absorption, long-term malnutrition, or use of certain medicines such as corticosteroids.",
+            hormone_title: "Growth hormone treatment",
+            hormone_text: "Growth hormone injection is one treatment that may help increase height. Growth hormone replacement therapy may be appropriate for children with growth hormone deficiency or growth delay. The aim of treatment is to help a child reach the best possible adult height, following an individual medical assessment.",
+            method_title: "How growth hormone is given",
+            method_text: "• Method and route: Given by subcutaneous injection, similar to an insulin injection, into fatty tissue such as the abdomen, thigh, or upper arm. Modern injection pens use very fine needles and discomfort is usually low.\n• Frequency: Traditional preparations are injected once daily before bedtime, when the body naturally releases more growth hormone during sleep. Some long-acting preparations are given once weekly.\n• Best treatment window: Treatment needs to begin before the growth plates close, usually before the end of puberty. Once growth plates have closed, additional growth hormone cannot increase height.",
+            efficacy_title: "Expected effect",
+            efficacy_text: "• Response varies: The effect of growth hormone depends on the underlying cause. Children with growth hormone deficiency usually have the most marked response; results vary for idiopathic short stature and chromosomal conditions.\n• Final adult height: With regular treatment over several years, some children may gain several to more than ten centimetres in final adult height. A doctor should assess and estimate the likely individual benefit.",
+            risks_title: "Side effects and risks",
+            risks_intro: "Growth hormone is generally safe when used under medical supervision. When treatment follows a doctor's instructions, side effects are uncommon, but ongoing monitoring is important.",
+            risk1_title: "1. Local injection reactions",
+            risk1_text: "Redness, bruising, pain, or loss of fat tissue at the injection site. Injection sites should be rotated regularly.",
+            risk2_title: "2. Fluid retention and joint pain",
+            risk2_text: "Mild swelling of the hands or feet, joint pain, or muscle aches may occur, most often early in treatment.",
+            risk3_title: "3. Headache and raised intracranial pressure",
+            risk3_text: "Rarely, benign intracranial hypertension may cause severe headache, nausea, or blurred vision.",
+            risk4_title: "4. Blood sugar and metabolic effects",
+            risk4_text: "Growth hormone can reduce insulin sensitivity and raise blood sugar, so blood sugar may need regular monitoring.",
+            risk5_title: "5. Bone and joint concerns",
+            risk5_text: "Rapid skeletal growth may cause or worsen scoliosis, and in rare cases may be associated with slipped capital femoral epiphysis.",
+            closing: "For more information, please consult a doctor. Treatment decisions should be based on an individual clinical assessment."
+        },
+        allergy: {
+            kicker: "Assessment and Treatment for Childhood Allergies",
+            title: "Paediatric Allergy and Allergen Desensitisation Treatment",
+            intro: "Eczema, allergic rhinitis, asthma, and urticaria are common childhood allergies. Assessment can help identify likely triggers and guide suitable treatment.",
+            contact_title: "Need an allergy assessment?",
+            contact_text: "Contact the clinic to discuss symptoms, testing, and treatment options for your child.",
+            overview_title: "Common childhood allergies",
+            overview_text: "Allergy occurs when the body overreacts to a substance, causing allergic symptoms. Eczema, allergic rhinitis, asthma, and urticaria are all common childhood allergic conditions.",
+            rhinitis_title: "Allergic rhinitis (nasal allergy)",
+            rhinitis_text: "• Inhaled allergens cause inflammation in the nasal passages. Symptoms can resemble a cold, including sneezing, runny nose, nasal blockage, and an itchy nose, and may persist for some time.\n• Many children with allergic rhinitis also have eye allergy symptoms, such as itching, red eyes, tearing, and swollen eyes.\n• Diagnosis may include clinical assessment and allergy testing to identify reactions to particular allergens and help reduce exposure risk.",
+            asthma_title: "Allergic asthma",
+            asthma_text: "• This is the most common type of asthma. Like allergic rhinitis, it is caused by allergic inflammation after inhaling environmental allergens.\n• Diagnosis may include clinical assessment, spirometry, and allergy testing.",
+            eczema_title: "Eczema (atopic dermatitis)",
+            eczema_text: "• Atopic dermatitis involves an inherited skin-barrier problem. Surface skin cells can shed more easily, weakening the skin's natural protection and increasing susceptibility to bacterial infection.\n• Moisture evaporates more easily from the skin, so affected skin may become dry or cracked.\n• External substances, such as chemicals and allergens, can enter the skin and stimulate immune cells over time, leading to allergic skin reactions.\n• It can affect appearance, confidence, sleep, concentration at school, and mood.",
+            urticaria_title: "Urticaria (hives)",
+            urticaria_text: "• Acute urticaria lasts less than six weeks; chronic urticaria lasts more than six weeks.\n• Histamine released in the skin can cause itchiness, redness, swelling, and hives.\n• Possible triggers include food or environmental allergy, infection, autoimmune reactions, and other factors such as stress, skin irritation, or pollution.",
+            testing_title: "IgE allergy testing",
+            testing_text: "If you would like to understand whether your child is allergic to a particular food or environmental trigger, an IgE allergy test may help identify possible allergens. Identifying and avoiding relevant allergens may help reduce reactions and symptoms associated with eczema, allergic rhinitis, asthma, and urticaria.\n\nAllergy testing helps identify substances that may trigger an allergic response in the body. Food allergy, eczema, allergic rhinitis, asthma, and urticaria are often linked with allergens. IgE testing can support a clinician's assessment, but results should always be interpreted together with symptoms and medical history.",
+            slit_title: "Sublingual immunotherapy",
+            slit_text: "• Sublingual immunotherapy uses a solution containing an allergen. After a course of treatment, reactions to the same allergen may be reduced.\n• It helps the body gradually build tolerance to relevant allergens and is increasingly used internationally, particularly in Europe.\n• It may be suitable for children and adults and can target allergy to cats, dogs, or house dust mites.\n• Symptoms may reduce noticeably after around 6 to 9 months, but treatment is generally used daily for three continuous years.\n• People allergic to several substances may need allergen desensitisation injections managed by an allergy specialist.\n• Serious side effects are uncommon. Symptoms may temporarily worsen early in treatment but can usually be managed with medication.",
+            outcomes_title: "Expected outcomes",
+            outcomes_text: "Based on clinical experience and academic publications in Hong Kong, reported outcomes vary by individual and diagnosis. For allergic rhinitis and allergic asthma, more than 90% of patients may experience symptom improvement and need less or no medication within 6 to 9 months. For atopic dermatitis, more than 70% of patients may experience symptom improvement and need less or no medication within 12 to 15 months. A doctor should advise whether this treatment is appropriate for an individual child.",
+            closing: "For more information, please consult a doctor. Testing and treatment decisions should be based on an individual clinical assessment."
+        },
         footer: {
             address: {
                 title: "Address",
@@ -67,7 +124,7 @@ const translations = {
             hero: {
                 title: "Well Kids Medical Centre",
                 kicker: "Family-Focused Specialist Care",
-                subtitle: "Well Kids Medical Centre provides pediatric specialist outpatient services, neonatal jaundice treatment, emergency delivery visit services, newborn hospitalization rounds services, private hospital hospitalization arrangements.",
+                subtitle: "Well Kids Medical Centre provides paediatric specialist outpatient services, neonatal jaundice treatment, emergency delivery visits, newborn inpatient rounds at Hong Kong Baptist Hospital, St. Teresa's Hospital, CUHK Medical Centre, and Union Hospital, and private hospital admission arrangements at St. Teresa's Hospital.",
                 point1: "Specialist paediatric care for newborns, infants, children, and adolescents",
                 point2: "Vaccination support, developmental assessment, and hospital arrangements",
                 point3: "Warm clinic environment with clear appointment and enquiry channels"
@@ -143,7 +200,11 @@ const translations = {
             dermatology: "Speech Therapy",
             dermatology_desc: "Speech therapists provide assessment and treatment for children with language development delays, pronunciation or voice disorders, and oral muscle problems.",
             orthopedics: "Inpatient Services",
-            orthopedics_desc: "Newborn inpatient ward rounds, private hospital admission arrangements."
+            orthopedics_desc: "Newborn inpatient ward rounds, private hospital admission arrangements.",
+            growth: "Child Growth and Development Assessment",
+            growth_desc: "Assessment and guidance for children with growth or developmental concerns.",
+            allergy: "Paediatric Allergy and Allergen Desensitisation Treatment",
+            allergy_desc: "Assessment, allergy testing, and desensitisation treatment for common childhood allergies."
         },
         nav: {
             home: 'Home',
@@ -162,11 +223,13 @@ const translations = {
             doctor1: {
                 name: 'Dr. So Wing Yee',
                 specialty: 'Specialist Paediatrics',
+                appointments: 'Honorary Clinical Assistant Professor, Department of Paediatrics (CUHK)',
                 credentials: 'MBBS(HK)\nMRCPCH\nFHKCPaed\nFHKAM(Paediatrics)\nDCH(International)(RCPCH)\nDCH(HK)(HKCPaed)'
             },
             doctor2: {
                 name: 'Dr. Tsang Chi Ho',
                 specialty: 'Specialist Paediatrics',
+                appointments: "Honorary Consultant in Paediatrics, St. Teresa's Hospital\nHonorary Clinical Assistant Professor, Department of Paediatrics (CUHK)",
                 credentials: 'MBBS(HK)\nMRCPCH\nFHKCPaed\nFHKAM(Paediatrics)\nDCH(International)(RCPCH)\nDCH(HK)(HKCPaed)'
             }
         },
@@ -258,6 +321,63 @@ const translations = {
                 included: "(不用打，已包含在六合一疫苗)"
             }
         },
+        growth: {
+            kicker: "陪伴孩子健康成長",
+            title: "兒童生長發展評估",
+            intro: "兒童的生長發展是家長重視的一環。如孩子可能有生長遲緩或身高較矮的情況，醫生評估有助了解可能成因及下一步安排。",
+            contact_title: "擔心孩子的成長嗎？",
+            contact_text: "歡迎聯絡診所安排評估，並由醫生按孩子的個別情況提供建議。",
+            overview_title: "何時應考慮評估？",
+            overview_text: "兒童生長發展都是父母比較重視的一環。身高較矮在臨床上通常指身高低於同年齡、同性別兒童的第 3 百分位數，常由多種因素共同作用所致。當懷疑有生長發育遲緩時，應尋求醫生專業意見，作出評估及檢查。",
+            causes_title: "身高較矮的主要成因",
+            non_pathological_title: "非病理因素（佔多數）",
+            non_pathological_text: "• 家族遺傳（Familial Short Stature）：父母身高較矮，孩子基因決定了生長曲線偏低，但發育進度正常。\n• 體質性生長遲緩（晚熟）：俗稱「晚生長」，骨齡通常比實際年齡小；雖然小時候較矮，但青春期來得較晚，最終成年身高往往能達到預期範圍。",
+            pathological_title: "病理與內分泌因素",
+            pathological_text: "• 生長激素缺乏症（GHD）：腦下垂體無法分泌足夠的生長激素。\n• 特發性矮小（ISS）：找不到明確病因，但身高明顯低於正常範圍。\n• 基因與染色體異常：如特納氏症（Turner syndrome）、普瑞德威利症候群（Prader-Willi syndrome，俗稱小胖威利）等。\n• 其他系統性疾病：慢性腎臟病、腸胃吸收不良、長期營養不良或使用特定藥物（如類固醇）。",
+            hormone_title: "生長激素治療",
+            hormone_text: "注射生長激素是其中一個有助提升身高的治療。生長激素替代療法可適用於生長激素缺乏症或生長遲緩的兒童。治療目標是在個別醫生評估後，協助孩子盡可能達到較理想的成人身高。",
+            method_title: "注射生長激素的方法",
+            method_text: "• 方式與途徑：採用皮下注射（類似胰島素注射），將藥物注射至脂肪層，例如腹部、大腿或手臂。現在多使用極細針頭的專用注射筆，疼痛感通常很低。\n• 注射頻率：傳統劑型為每天睡前注射一次，因人體自然分泌生長激素的高峰在夜間熟睡時；目前亦有部分長效型劑型改為每週注射一次。\n• 施打黃金期：必須在骨骼生長板尚未閉合之前，即一般在青春期結束前進行。一旦生長板閉合，再補充生長激素也無法增高。",
+            efficacy_title: "療效",
+            efficacy_text: "• 個體差異大：生長激素的療效取決於病因。對生長激素缺乏症患者，補充後效果通常最顯著；對特發性矮小或染色體異常者，效果因人而異。\n• 增加最終成年身高：規律治療數年間，部分患者平均可多獲得數公分至十數公分的最終身高；具體增加幅度需由醫生評估及預測。",
+            risks_title: "副作用與風險",
+            risks_intro: "生長激素在醫生監督下使用的安全性較高。一般情況下只要遵從醫生指示，副作用並不常見，但仍需定期跟進及監察。",
+            risk1_title: "1. 注射局部反應",
+            risk1_text: "注射部位紅腫、瘀青、疼痛或皮下脂肪萎縮；需定期輪換注射部位。",
+            risk2_title: "2. 水腫與關節疼痛",
+            risk2_text: "體液滯留可導致手腳輕微水腫、關節或肌肉酸痛，多發生於治療初期。",
+            risk3_title: "3. 頭痛與顱內壓增高",
+            risk3_text: "少數人可能出現良性特發性顱內壓升高，引發劇烈頭痛、噁心或視力模糊。",
+            risk4_title: "4. 血糖與代謝影響",
+            risk4_text: "生長激素可降低胰島素敏感度並使血糖升高，因此可能需要定期追蹤血糖。",
+            risk5_title: "5. 骨骼問題",
+            risk5_text: "骨骼生長過快可能導致或加重脊椎側彎，或極少數情況下出現股骨頭滑脫。",
+            closing: "如需要了解更多，請諮詢醫生意見。治療安排應按孩子的個別臨床評估而定。"
+        },
+        allergy: {
+            kicker: "兒童過敏症評估及治療",
+            title: "兒童過敏症及脫敏治療",
+            intro: "濕疹、鼻敏感、哮喘及蕁麻疹均是兒童常見的過敏症。透過評估可了解可能的致敏原，並制定合適的治療方案。",
+            contact_title: "想安排過敏評估？",
+            contact_text: "歡迎聯絡診所，與我們討論孩子的症狀、過敏測試及治療選項。",
+            overview_title: "常見兒童過敏症",
+            overview_text: "過敏症是指身體對某種物質過度反應，從而出現不同過敏症狀。濕疹、鼻敏感、哮喘及蕁麻疹都是兒童常見的過敏症。",
+            rhinitis_title: "過敏性鼻炎（鼻敏感）",
+            rhinitis_text: "• 吸入致敏原會令鼻腔出現發炎反應，徵狀與一般傷風感冒十分相似，包括打噴嚏、流鼻水、鼻塞和鼻子痕癢等，並可能持續一段時間。\n• 不少鼻敏感患者同時有眼睛敏感問題，徵狀包括痕癢、出現紅筋、流眼水及眼腫等。\n• 診斷可包括臨床診斷及過敏測試，了解患者對某些致敏原的反應，從而避免及減低接觸致敏原的風險。",
+            asthma_title: "過敏性哮喘",
+            asthma_text: "• 這是最常見的哮喘類型，成因與鼻敏感十分相似，同樣是吸入環境致敏原所引致的過敏性發炎。\n• 診斷可包括臨床診斷、肺量檢查（Spirometry）及過敏測試。",
+            eczema_title: "濕疹（過敏性皮炎）",
+            eczema_text: "• 過敏性皮炎與先天性的皮膚結構問題有關，患者皮膚表層細胞較容易脫落，失去應有的天然保護功能，皮膚抵抗力較低，容易受細菌感染。\n• 患者皮膚表面的水分較易蒸發，皮膚會較乾燥，甚至出現龜裂。\n• 外界物質如化學物質及致敏原可滲入皮膚，長時間刺激皮膚免疫細胞，形成皮膚過敏現象。\n• 可影響外觀、自信、睡眠質素及學習專注力，亦可能令情緒較煩躁及不耐煩。",
+            urticaria_title: "蕁麻疹（風疹／風癩）",
+            urticaria_text: "• 急性蕁麻疹：發病時期少於六星期；慢性蕁麻疹：發病時期多於六星期。\n• 組織胺在皮膚釋放時會引致痕癢、紅腫及出疹等蕁麻疹現象。\n• 可能成因包括食物及環境過敏、感染、自身免疫反應，以及其他因素如壓力、皮膚刺激或污染物。",
+            testing_title: "IgE 過敏測試",
+            testing_text: "如想了解兒童是否對某種食物或環境物質過敏，可考慮接受 IgE 過敏測試，找出可能的致敏原，從而降低引起濕疹、鼻敏感、哮喘及蕁麻疹等反應和病徵的機會。\n\n過敏檢測主要用於了解體內對何種物質產生過敏反應。食物敏感、濕疹、鼻敏感、哮喘及蕁麻疹大多與致敏原有關；IgE 測試可協助找出可能的致敏原，但結果應與症狀及病歷一併由醫生解讀。",
+            slit_title: "舌下脫敏治療",
+            slit_text: "• 舌下脫敏治療使用含有致敏原的溶液。完成療程後，即使遇上同類致敏原，患者出現的過敏反應可能較以往減少。\n• 有助患者在體內逐漸建立免疫耐受，對抗相關致敏原；在其他國家，特別是歐洲，舌下免疫治療愈來愈普遍。\n• 適合小童及成人，可分別針對貓、狗或塵蟎的過敏。\n• 約 6 至 9 個月後症狀可能明顯減少，一般需連續三年每天使用。\n• 如同時對多種物質過敏，則可能需要由過敏專科醫生進行脫敏注射治療。\n• 嚴重副作用一般不常見；常見情況是使用初期病情可能稍為加劇，但通常可用藥物控制。",
+            outcomes_title: "預期結果",
+            outcomes_text: "根據香港的臨床經驗和學術刊物，療效會因個人及診斷而異。過敏性鼻炎及過敏性哮喘患者中，超過 90% 的患者可能在 6 至 9 個月內有症狀改善及減少或無需藥物治療；過敏性皮炎患者中，超過 70% 的患者可能在 12 至 15 個月內有症狀改善及減少或無需藥物治療。醫生會按個別孩子的情況判斷是否適合此治療。",
+            closing: "如需要了解更多，請諮詢醫生意見。測試及治療安排應按孩子的個別臨床評估而定。"
+        },
         footer: {
             address: {
                 title: "地址",
@@ -294,7 +414,7 @@ const translations = {
             hero: {
                 title: "允翹兒科中心",
                 kicker: "以家庭為本的兒科專科照護",
-                subtitle: "允翹兒科中心提供兒科專科門診服務、新生嬰兒黃疸治療、緊急分娩到診服務、初生嬰兒住院巡房服務 (浸會醫院、聖德肋撒醫院(法國醫院))、私家醫院住院安排 (聖德肋撒醫院(法國醫院))",
+                subtitle: "允翹兒科中心提供兒科專科門診服務、新生嬰兒黃疸治療、緊急分娩到診服務、初生嬰兒住院巡房服務 (浸會醫院、聖德肋撒醫院(法國醫院)、香港中文大學醫院、仁安醫院)、私家醫院住院安排 (聖德肋撒醫院(法國醫院))",
                 point1: "為初生嬰兒、幼兒、兒童及青少年提供兒科專科照護",
                 point2: "疫苗接種、發展評估、住院安排及母乳支援服務",
                 point3: "溫和親切的診所環境，並提供清晰方便的預約及查詢渠道"
@@ -370,7 +490,11 @@ const translations = {
             dermatology: "言語治療",
             dermatology_desc: "由言語治療師為有語言發展遲緩、發音或聲線障礙、口部肌肉等問題的兒童提供評估與治療。",
             orthopedics: "住院服務",
-            orthopedics_desc: "初生嬰兒住院巡房服務，私家醫院住院安排。"
+            orthopedics_desc: "初生嬰兒住院巡房服務，私家醫院住院安排。",
+            growth: "兒童生長發展評估",
+            growth_desc: "為有生長或發展疑慮的兒童提供評估及專業建議。",
+            allergy: "兒童過敏症及脫敏治療",
+            allergy_desc: "為常見兒童過敏症提供評估、過敏測試及脫敏治療。"
         },
         nav: {
             home: '首頁',
@@ -389,11 +513,13 @@ const translations = {
             doctor1: {
                 name: '蘇詠怡醫生',
                 specialty: '兒科專科醫生',
+                appointments: '香港中文大學兒科學系名譽臨床助理教授\nHonorary Clinical Assistant Professor, Department of Paediatrics (CUHK)',
                 credentials: '香港大學内外全科醫學士\n英國皇家兒科醫學院院員\n香港兒科醫學院院士\n香港醫學專科學院院士（兒科）\n英國皇家兒科醫學院兒科文憑（國際）\n香港兒科醫學院兒科文憑（香港）'
             },
             doctor2: {
                 name: '曾志豪醫生',
                 specialty: '兒科專科醫生',
+                appointments: '聖德肋撒醫院榮譽顧問醫生\nHonorary Consultant in Paediatrics, St. Teresa\'s Hospital\n香港中文大學兒科學系名譽臨床助理教授\nHonorary Clinical Assistant Professor, Department of Paediatrics (CUHK)',
                 credentials: '香港大學内外全科醫學士\n英國皇家兒科醫學院院員\n香港兒科醫學院院士\n香港醫學專科學院院士（兒科）\n英國皇家兒科醫學院兒科文憑（國際）\n香港兒科醫學院兒科文憑（香港）'
             }
         },
